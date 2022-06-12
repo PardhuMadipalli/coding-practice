@@ -46,7 +46,7 @@ class Solution
 
     }
 
-    static int findPlatform(int arr[], int dep[], int n)
+    static int findPlatform2(int arr[], int dep[], int n)
     {
         // add your code here
         TreeMap<Integer, Integer> map = new TreeMap<>();
