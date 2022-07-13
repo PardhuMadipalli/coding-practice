@@ -71,11 +71,16 @@ the size of tree is very smaller than O(log n). So, on careful calculation the b
 - If it has both the children, find the immediate successor (or predecessor) and replace the current node with that.
 
 ## Problems list
-### Binary search
+#### Binary search
 1. You have to find not the exact match, but the least absolute distance to the elements in the array. [heaters problem](https://leetcode.com/problems/heaters/)
 
-### Two pointers
+#### Two pointers
 Sometimes, you may have to sort the data when using this. Also this can be extended to tree pointers and more.
 
 1. [Three sum problem](https://leetcode.com/problems/3sum)
-2. 
+
+#### Diff array technique
+1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](/problems/miscellaneous/CorpFlightBookings.java)
+
+#### Dynamic Programming (DP)
+1. [Maximal Square](https://leetcode.com/problems/maximal-square/) - Difficult to come up with the logic. 
