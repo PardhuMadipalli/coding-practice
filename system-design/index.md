@@ -1,5 +1,9 @@
 # System Design
 
+##### Index
+
+- [Important points](/system-design)
+- [Databases](/system-design/databases.html)
 
 ## Points
 - When you have to optimize for reads, i.e., R >>> W, then replicate the data so that all app servers can send the response.

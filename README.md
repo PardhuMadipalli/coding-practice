@@ -1,5 +1,15 @@
 # Coding practice
 
+##### Index
+
+- [Home](/)
+  - [Search](#search)
+  - [Sorting](#sorting)
+  - [Data Structures](#data-structures)
+  - [Problems list](#problems-list)
+- [System Design](/system-design)
+- [gRPC](/grpc-protocol-buffers/docs/)
+
 ## Search
 - Binary search
 
