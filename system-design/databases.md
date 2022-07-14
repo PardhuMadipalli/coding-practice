@@ -1,5 +1,9 @@
 # Databases
 
+##### Index
+- [Coding practice Home](../..)
+- [System Design Home](..)
+
 ## Database properties
 
 *Atomicity*: Entire operation must be done in a single transaction. A good example is debiting money from 
@@ -41,14 +45,40 @@ in an ecommerce website. Different items have different fields.
 - They are used when you need all the details related to an object. No expensive joins are needed to find all the details of a single object.
 - ACID transactions MAY not be guaranteed here.
 
-#### MongoDB
+##### MongoDB
 - Guarantees ACID. On of the very NoSQL databases that does this.
 - We can update multiple documents in a single transaction, similarly to how we update multiple rows in a relational DB.
 - It offers synchronized replication also.
+
+#### Columnar databases
+- Use for analytic workloads. 
 
 ## CAP theorem in distributed databases
 - Only one out of consistency, availability and partition failure tolerance is guaranteed.
 - In most distributed databases, network partition failures will happen. So you must try to handle that.
 - It means that we have to choose between consistency and availability.
 - MongoDB and Kafka provide C and P.
-- Cassandra focuses on A and P.
+- Cassandra focuses on A and P. But it offers an option to tune consistency. We can choose how many replica nodes to say OK before marking
+the operation(read/write) as successful.
+
+## Indexing
+
+### Categories of indexing
+
+#### Dense Indexing
+- All keys will be mapped to a certain block on the disk.
+- Problem is this index table itself might be huge depending on the number of rows we have.
+
+#### Sparse indexing
+- Table data must be sorted the column where we are indexing.
+
+### Types of indexing
+
+#### Primary
+Created on the *ordered* primary key of a table. Use preferably Sparse indexing.
+
+#### Clustered
+Created on the *ordered* non-key field of the table. Use preferably Sparse indexing.
+
+#### Secondary
+Created on the *unordered* primary key of the table. Here only dense index is possible because the table is not ordered.
