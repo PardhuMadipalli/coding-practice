@@ -1,8 +1,8 @@
 # Databases
 
 ##### Index
-- [Coding practice Home](../..)
-- [System Design Home](..)
+- [Coding practice Home](..)
+- [System Design Home](.)
 
 ## Database properties
 

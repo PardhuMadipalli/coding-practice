@@ -2,8 +2,8 @@
 
 ##### Index
 - [Coding practice Home](..)
-- [Important points](system-design)
-- [Databases](/system-design/databases)
+- [Important points](#points)
+- [Databases](databases)
 
 ## Points
 - When you have to optimize for reads, i.e., R >>> W, then replicate the data so that all app servers can send the response.
