@@ -1,7 +1,8 @@
-package miscellaneous;
+package problems.miscellaneous;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/next-permutation/
 public class NextPermutation {
     public void nextPermutation(int[] nums) {
         final int n = nums.length;
@@ -40,7 +41,7 @@ public class NextPermutation {
     }
 
     public static void main(String[] args) {
-        int[] input = new int[]{9, 3, 7, 13, 12, 6};
+        int[] input = new int[]{9, 3, 7, 13, 6, 12};
         new NextPermutation().nextPermutation(input);
         System.out.println(Arrays.toString(input));
     }

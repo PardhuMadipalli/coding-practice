@@ -51,7 +51,7 @@ in an ecommerce website. Different items have different fields.
 - It offers synchronized replication also.
 
 #### Columnar databases
-- Use for analytic workloads. 
+- Use for analytic workloads. Cassandra is one such database.
 
 ## CAP theorem in distributed databases
 - Only one out of consistency, availability and partition failure tolerance is guaranteed.

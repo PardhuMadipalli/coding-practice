@@ -8,7 +8,7 @@
   - [Data Structures](#data-structures)
   - [Problems list](#problems-list)
 - [System Design](system-design)
-- [gRPC](grpc-protocol-buffers/docs/)
+- [gRPC]****(grpc-protocol-buffers/docs/)
 
 ## Search
 - Binary search
@@ -80,17 +80,56 @@ the size of tree is very smaller than O(log n). So, on careful calculation the b
 - If the node has only one child, replace the existing node with its child.
 - If it has both the children, find the immediate successor (or predecessor) and replace the current node with that.
 
+#### Trie
+- Used for searching as in a dictionary.
+
 ## Problems list
 #### Binary search
 1. You have to find not the exact match, but the least absolute distance to the elements in the array. [heaters problem](https://leetcode.com/problems/heaters/)
 
 #### Two pointers
-Sometimes, you may have to sort the data when using this. Also this can be extended to tree pointers and more.
+Sometimes, you may have to sort the data when using this. Also this can be extended to three pointers and more.
 
 1. [Three sum problem](https://leetcode.com/problems/3sum)
+2. [Next Permutation](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/NextPermutation.java)
 
 #### Diff array technique
-1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](/problems/miscellaneous/CorpFlightBookings.java)
+1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](problems/miscellaneous/CorpFlightBookings.java)
 
 #### Dynamic Programming (DP)
-1. [Maximal Square](https://leetcode.com/problems/maximal-square/) - Difficult to come up with the logic. 
+1. [Maximal Square](https://leetcode.com/problems/maximal-square/) - Difficult to come up with the logic.
+2. [Largest magic square](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestMagicSquare.java)
+3. [Edit Distance](https://leetcode.com/problems/edit-distance/)
+
+#### Monotonic stack
+1. [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java)
+
+#### Using original indexes array
+1. [Couples holding hands](https://leetcode.com/problems/couples-holding-hands/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/Coupleholdinghands.java)
+
+#### Hashing
+1. [Group anagrams](https://leetcode.com/problems/group-anagrams/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/GroupAnagrams.java)
+
+#### Sorting
+1. [Group anagrams](https://leetcode.com/problems/group-anagrams/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/GroupAnagrams.java)
+2. [My Calendar](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MyCalendar.java)
+
+#### Recursion
+1. [House Robber Three](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/HouseRobberThree.java)
+
+#### Binary Tree
+1. [House Robber Three](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/HouseRobberThree.java)
+
+#### Heap - Priority Queue
+1. [Leetcode IPO](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/IPO.java)
+
+#### Sliding window
+1. [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/)
+
+#### Graphs
+
+##### Union Find
+1. **Asked in an interview**: [Group nodes into a network and find sum after each network merge](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/NetworkSumUnionFind.java)
+
+##### Topological sort
+1. [Course schedule two](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/CourseScheduleTwo.java)

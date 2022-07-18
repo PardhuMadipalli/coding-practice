@@ -1,8 +1,10 @@
-package miscellaneous;
+package problems.miscellaneous;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+// Not completed
 
 public class LarrysArray {
     public static String larrysArray(List<Integer> a) {

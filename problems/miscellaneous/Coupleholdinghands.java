@@ -1,5 +1,6 @@
-package miscellaneous;
+package problems.miscellaneous;
 
+// https://leetcode.com/problems/couples-holding-hands/
 public class Coupleholdinghands {
     public int minSwapsCouples(int[] row) {
         final int n= row.length;

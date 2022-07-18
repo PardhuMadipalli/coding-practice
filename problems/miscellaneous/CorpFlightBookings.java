@@ -1,3 +1,5 @@
+package problems.miscellaneous;
+
 public class CorpFlightBookings {
 
     // brute force
@@ -12,7 +14,7 @@ public class CorpFlightBookings {
         return ans;
     }
 
-
+    // Optimal solution
     public int[] corpFlightBookings(int[][] bookings, int n) {
         int[] diff = new int[n];
         int seats;

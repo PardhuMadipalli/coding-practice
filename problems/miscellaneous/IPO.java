@@ -1,12 +1,9 @@
-package miscellaneous;
+package problems.miscellaneous;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 import java.util.PriorityQueue;
-import java.util.stream.IntStream;
+
+// https://leetcode.com/problems/ipo/
 
 public class IPO {
         public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {
@@ -20,29 +17,27 @@ public class IPO {
 
             PriorityQueue<Integer> rem = new PriorityQueue<>(Comparator.comparingInt((Integer a) -> profits[a]).reversed());
 
-            Integer curr;
-            while(!q.isEmpty() && k>0) {
-                for(curr = q.peek(); !q.isEmpty() && w>=capital[curr];) {
-                    rem.add(curr);
-                    q.remove();
-                    curr = q.peek();
+            while((!q.isEmpty() || !rem.isEmpty()) && k>0) {
+
+                // Loop over q elements as long as capital can be afforded by w./
+                // Each time add corresponding profit to "rem" queue
+                while (!q.isEmpty() && w>=capital[q.peek()]) {
+                    rem.add(q.remove());
                 }
+
+                // Out of the possible profits, choose maximum profit.
+                // Do not run a loop here, in the next outer iterator, we may have a higher profitable project
                 if(!rem.isEmpty()) {
                     w+=profits[rem.poll()];
                     k--;
-                } else {
+                } else { // If no further profit can be earned, return.
                     return w;
                 }
-            }
-
-            while(!rem.isEmpty() && k>0) {
-                w+=profits[rem.poll()];
-                k--;
             }
             return w;
         }
 
         public static void main(String[] args){
-            new IPO().findMaximizedCapital(2, 0, new int[]{1,2,3}, new int[]{0,1,1});
+            System.out.println(new IPO().findMaximizedCapital(2, 0, new int[]{1,2,3}, new int[]{0,1,1}));
         }
 }
