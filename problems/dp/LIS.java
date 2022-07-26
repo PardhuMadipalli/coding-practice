@@ -1,4 +1,4 @@
-package dp;
+package problems.dp;
 
 /* A Naive Java Program for LIS Implementation */
 class LIS {

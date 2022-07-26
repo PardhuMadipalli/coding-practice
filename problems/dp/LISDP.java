@@ -1,7 +1,7 @@
 /* Dynamic Programming Java implementation
 of LIS problem */
 
-package dp;
+package problems.dp;
 
 class LISDP {
     /* lis() returns the length of the longest

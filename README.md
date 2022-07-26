@@ -8,11 +8,10 @@
   - [Data Structures](#data-structures)
   - [Problems list](#problems-list)
 - [System Design](system-design)
-- [gRPC]****(grpc-protocol-buffers/docs/)
+- [gRPC](grpc-protocol-buffers/docs/)
 
 ## Search
 - Binary search
-
 
 ## Sorting
 ### Insertion sort
@@ -83,7 +82,23 @@ the size of tree is very smaller than O(log n). So, on careful calculation the b
 #### Trie
 - Used for searching as in a dictionary.
 
+### Graphs
+- Maximum flow - min cut algorithm [Ford Fulkerson](https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/)
+- 
+## Mathematical concepts
+
+- [Modular division and inverse](https://www.geeksforgeeks.org/modular-division/)
+- 
+
 ## Problems list
+
+#### Divide and Conquer
+1. A very good problem: [Longest Substring with At Least K Repeating Characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)
+
+#### Monotonic queue
+1. [Shortest Unsorted Continuous Subarray](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/ShortestUnsortedContinuousSubarray.java)
+2. [Sliding Window Maximum](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MaxSlidingWindow.java)
+
 #### Binary search
 1. You have to find not the exact match, but the least absolute distance to the elements in the array. [heaters problem](https://leetcode.com/problems/heaters/)
 
@@ -100,6 +115,8 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 1. [Maximal Square](https://leetcode.com/problems/maximal-square/) - Difficult to come up with the logic.
 2. [Largest magic square](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestMagicSquare.java)
 3. [Edit Distance](https://leetcode.com/problems/edit-distance/)
+4. [Maximum Profit in Job Scheduling](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/MaximumProfitInJobScheduling.java)
+5. [Palindrome partitioning](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/PalindromePartitioning.java)
 
 #### Monotonic stack
 1. [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java)
@@ -109,6 +126,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 
 #### Hashing
 1. [Group anagrams](https://leetcode.com/problems/group-anagrams/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/GroupAnagrams.java)
+2. [Longest Consecutive Sequence](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LongestConsecutive.java)
 
 #### Sorting
 1. [Group anagrams](https://leetcode.com/problems/group-anagrams/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/GroupAnagrams.java)
@@ -127,6 +145,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 1. [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/)
 
 #### Graphs
+1. [Bipartite graph](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/BiPartiteGraph.java)
 
 ##### Union Find
 1. **Asked in an interview**: [Group nodes into a network and find sum after each network merge](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/NetworkSumUnionFind.java)
