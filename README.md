@@ -85,7 +85,8 @@ the size of tree is very smaller than O(log n). So, on careful calculation the b
 
 ### Graphs
 - Maximum flow - min cut algorithm [Ford Fulkerson](https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/)
-- 
+
+
 ## Mathematical concepts
 
 - [Modular division and inverse](https://www.geeksforgeeks.org/modular-division/)
