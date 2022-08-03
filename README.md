@@ -7,6 +7,7 @@
   - [Sorting](#sorting)
   - [Data Structures](#data-structures)
   - [Problems list](#problems-list)
+  - [Mathematical concepts](#mathematical-concepts)
 - [System Design](system-design)
 - [gRPC](grpc-protocol-buffers/docs/)
 
@@ -88,7 +89,7 @@ the size of tree is very smaller than O(log n). So, on careful calculation the b
 ## Mathematical concepts
 
 - [Modular division and inverse](https://www.geeksforgeeks.org/modular-division/)
-- 
+
 
 ## Problems list
 
@@ -140,7 +141,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 
 #### Heap - Priority Queue
 1. [Leetcode IPO](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/IPO.java)
-2. [Maximum jobs in non-consecutive towns](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MaximumNonCons.java)
+2. **Asked in an interview** [Maximum jobs in non-consecutive towns](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MaximumNonCons.java)
 
 #### Sliding window
 1. [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/)
