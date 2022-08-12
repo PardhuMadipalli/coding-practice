@@ -1,4 +1,4 @@
-package javapractice;
+package problems.miscellaneous;
 
 import java.util.ArrayList;
 import java.util.Arrays;

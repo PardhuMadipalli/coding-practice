@@ -5,10 +5,10 @@ public class ArrayUnique {
         int max = 100000+1;
         int res=0;
         boolean[] found = new boolean[max];
-        for(int i=0; i<nums.length; i++) {
-            for(int j=nums[i]; j<=max; j++) {
-                if(!found[j]){
-                    res += (j-nums[i]);
+        for (int num : nums) {
+            for (int j = num; j <= max; j++) {
+                if (!found[j]) {
+                    res += (j - num);
                     // System.out.println("i is " + i + " diff is "+(j-nums[i]));
                     found[j] = true;
                     break;

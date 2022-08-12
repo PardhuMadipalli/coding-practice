@@ -15,8 +15,10 @@
 - Binary search
 
 ## Sorting
+
 ### Insertion sort
 - Time complexity O(n<sup>2</sup>)
+
 ### Bubble sort
 - Time complexity O(n<sup>2</sup>)
 
@@ -47,7 +49,7 @@
 
 - This is always a complete binary tree.
 - So it can be represented easily in an array.
-- Children of node at *i* will be at *2i+2* and *2i+2*. Parent of node *i* will be at *(i-1)/2*.
+- Children of node at *i* will be at *2i-2* and *2i+2*. Parent of node *i* will be at *(i-1)/2*.
 - In a min-heap, a parent node will always be less than or equal to their children.
 
 #### Insertion
@@ -119,6 +121,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 3. [Edit Distance](https://leetcode.com/problems/edit-distance/)
 4. [Maximum Profit in Job Scheduling](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/MaximumProfitInJobScheduling.java)
 5. [Palindrome partitioning](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/PalindromePartitioning.java)
+6. [Longest Valid Parentheses](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/LongestValidParentheses.java)
 
 #### Monotonic stack
 1. [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java)

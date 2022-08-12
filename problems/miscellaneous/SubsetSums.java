@@ -1,4 +1,4 @@
-package javapractice;
+package problems.miscellaneous;
 
 // Java program to print sums
 // of all possible subsets.
