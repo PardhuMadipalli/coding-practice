@@ -1,0 +1,36 @@
+# Java and Object-Oriented Programming
+
+## OOP Concepts
+
+### Abstraction
+Classes, abstract classes, inheritance all abstract the complete details of the members of it.
+
+### Encapsulation
+Wrapping up of data under a single unit. For example, we declare all instance variables as private and access a few of the, using setters and getters.
+
+### Inheritance
+Classes are made reusable and they can have parent child relationships.
+
+### Polymorphism
+One item taking multiple forms is called polymorphism. For example method overloading and overriding.
+
+- [Method overloading demo](https://github.com/PardhuMadipalli/coding-practice/blob/main/javapractice/MethodOverloadingDemo.java)
+- [Method overriding demo](https://github.com/PardhuMadipalli/coding-practice/blob/main/javapractice/MethodOverridingDemo.java)
+- **[Producer Extends Consumer Super](https://stackoverflow.com/questions/4343202/difference-between-super-t-and-extends-t-in-java/4343547#4343547)**
+
+## Java Interview Questions
+
+- #### Can you access private members (methods and fields) of an object from outside the class?
+Yes, we can access them using Java reflection API. 
+Check this [GeeksforGeeks article](https://www.geeksforgeeks.org/how-to-access-private-field-and-method-using-reflection-in-java) to understand how to do it.
+
+
+- #### Does HashMap allow null key?
+Yes, one null key.
+
+- #### What are differences between abstract class and interface?
+  - Multiple interfaces can be implemented by a single class. It is not possible extend multiple abstract classes.
+  - Abstract class should be used when there is a parent-child relationship. Interface is used when you want to define only a partial behaviour.
+
+
+

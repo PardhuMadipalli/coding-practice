@@ -45,7 +45,6 @@ public class TreeFromInAndPost {
 
         return root;
     }
-    }
 
     public static void main(String[] args) {
         int[] ino = new int[]{1,2,3,4};

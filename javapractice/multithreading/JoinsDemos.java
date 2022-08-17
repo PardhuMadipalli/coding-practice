@@ -51,7 +51,7 @@ class TestThread extends Thread {
 }
 
 
-public class ExecutorServiceDomain {
+public class JoinsDemos {
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new TestThread("first", true, 1);
         Thread t2 = new TestThread("second", true, 2);
