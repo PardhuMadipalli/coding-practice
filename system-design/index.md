@@ -1,9 +1,11 @@
 # System Design
 
-##### Index
+**Index**
 - [Coding practice Home](..)
-- [Important points](#points)
 - [Databases](databases)
+
+<!-- START doctoc -->
+<!-- END doctoc -->
 
 ## Points
 - When you have to optimize for reads, i.e., `R >>> W`, then replicate the data so that all app servers can send the response.
