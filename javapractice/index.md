@@ -34,20 +34,20 @@ One item taking multiple forms is called polymorphism. For example method overlo
 
 ## Java Interview Questions
 
-- #### Can you access private members (methods and fields) of an object from outside the class?
+#### Can you access private members (methods and fields) of an object from outside the class?
 <details>
   <summary>Answer</summary>
 Yes, we can access them using Java reflection API. 
 Check this [GeeksforGeeks article](https://www.geeksforgeeks.org/how-to-access-private-field-and-method-using-reflection-in-java) to understand how to do it.
 </details>
 
-- #### Does HashMap allow null key?
+#### Does HashMap allow null key?
 <details>
   <summary>Answer</summary>
 Yes, one null key.
 </details>
 
-- #### What are differences between abstract class and interface?
+#### What are differences between abstract class and interface?
 <details>
   <summary>Answer</summary>
   - Multiple interfaces can be implemented by a single class. It is not possible extend multiple abstract classes.
