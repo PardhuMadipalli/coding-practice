@@ -9,6 +9,9 @@
     - [Inheritance](#inheritance)
     - [Polymorphism](#polymorphism)
   - [Java Interview Questions](#java-interview-questions)
+      - [Can you access private members (methods and fields) of an object from outside the class?](#can-you-access-private-members-methods-and-fields-of-an-object-from-outside-the-class)
+      - [Does HashMap allow null key?](#does-hashmap-allow-null-key)
+      - [What are differences between abstract class and interface?](#what-are-differences-between-abstract-class-and-interface)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
