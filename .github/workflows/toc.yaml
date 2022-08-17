@@ -8,6 +8,6 @@ jobs:
       - uses: technote-space/toc-generator@v4
         with:
           CREATE_PR: true
-          TARGET_PATHS: javapractice/index.md
+          TARGET_PATHS: javapractice/index.md,system-design/index.md
           GITHUB_TOKEN: ${{ secrets.TOC_GENERATOR }}
           MAX_HEADER_LEVEL: 6
