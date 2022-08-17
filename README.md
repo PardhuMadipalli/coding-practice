@@ -8,6 +8,7 @@
   - [Data Structures](#data-structures)
   - [Problems list](#problems-list)
   - [Mathematical concepts](#mathematical-concepts)
+- [Java and OOP](javapractice)
 - [System Design](system-design)
 - [gRPC](grpc-protocol-buffers/docs/)
 

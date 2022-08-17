@@ -6,14 +6,14 @@
 - [Databases](databases)
 
 ## Points
-- When you have to optimize for reads, i.e., R >>> W, then replicate the data so that all app servers can send the response.
+- When you have to optimize for reads, i.e., `R >>> W`, then replicate the data so that all app servers can send the response.
 - When an application is write-intensive, you should shard the data so that all the data doesn't go to a single server.
 - For a batch processing, when you process something at the EOD, do not process everything at a single stretch. Keep them in queue
 and process one after the other so that not many instances are needed at only midnight.
-- For any process that involves multiple services use a field, some thing like a UUID to identify the operation. Pass this ID
+- For any process that involves multiple services, use a field, something like a UUID to identify the operation. Pass this ID
 along to all the services using HTTP headers. Then you can filter logs based on this ID. It is similar to opc-request-id in OCI.
 
-## TO-Read
+## To-Read
 
 - Graph databases used in social media apps such as Facebook.
 - Horizontal and vertical sharding. When to use what.
