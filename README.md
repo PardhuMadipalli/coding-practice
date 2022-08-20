@@ -2,18 +2,17 @@
 
 ##### Index
 
-- [Home]()
-  - [Search](#search)
-  - [Sorting](#sorting)
-  - [Data Structures](#data-structures)
-  - [Problems list](#problems-list)
-  - [Mathematical concepts](#mathematical-concepts)
 - [Java and OOP](javapractice)
 - [System Design](system-design)
 - [gRPC](grpc-protocol-buffers/docs/)
 
+<!-- START doctoc -->
+<!-- END doctoc -->
+
 ## Search
 - Binary search
+  - [binary Helper codes](https://github.com/PardhuMadipalli/coding-practice/blob/main/binarysearch)
+- Linear search
 
 ## Sorting
 
@@ -107,7 +106,11 @@ then delete it in the same manner as we delete the root. So deletion of an arbit
 2. [Sliding Window Maximum](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MaxSlidingWindow.java)
 
 #### Binary search
+
+[Binary search problems folder](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/binarysearch)
+
 1. You have to find not the exact match, but the least absolute distance to the elements in the array. [heaters problem](https://leetcode.com/problems/heaters/)
+
 
 #### Two pointers
 Sometimes, you may have to sort the data when using this. Also this can be extended to three pointers and more.
