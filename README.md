@@ -69,6 +69,8 @@ the size of tree is very smaller than O(log n). So, on careful calculation the b
 - Replace the heap root with the last element.
 - Then start the heapify process from the root in a top-down manner.
 - Time complexity: O(log n) = O(height)
+- If you want to delete an intermediate element (as available in PriorityQueue Java), we first need to find the element by checking through each element, which takes O(n) operations and
+then delete it in the same manner as we delete the root. So deletion of an arbitrary element takes `O(n)` complexity.
 
 ### Binary Search Tree
 - All the elements smaller than the root are on the left sub-tree and all higher are on the right sub-tree. This is valid for all underlying sub-tress too.
