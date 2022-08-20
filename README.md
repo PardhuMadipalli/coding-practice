@@ -6,8 +6,47 @@
 - [System Design](system-design)
 - [gRPC](grpc-protocol-buffers/docs/)
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Search](#search)
+- [Sorting](#sorting)
+  - [Insertion sort](#insertion-sort)
+  - [Bubble sort](#bubble-sort)
+  - [Merge sort](#merge-sort)
+  - [Quick sort](#quick-sort)
+- [Data structures](#data-structures)
+  - [Binary Heap (min-heap)](#binary-heap-min-heap)
+    - [Insertion](#insertion)
+    - [Building](#building)
+    - [Deletion](#deletion)
+  - [Binary Search Tree](#binary-search-tree)
+    - [Insertion](#insertion-1)
+    - [Deletion](#deletion-1)
+    - [Trie](#trie)
+  - [Graphs](#graphs)
+- [Mathematical concepts](#mathematical-concepts)
+- [Problems list](#problems-list)
+    - [Divide and Conquer](#divide-and-conquer)
+    - [Monotonic queue](#monotonic-queue)
+    - [Binary search](#binary-search)
+    - [Two pointers](#two-pointers)
+    - [Diff array technique](#diff-array-technique)
+    - [Dynamic Programming (DP)](#dynamic-programming-dp)
+    - [Monotonic stack](#monotonic-stack)
+    - [Using original indexes array](#using-original-indexes-array)
+    - [Hashing](#hashing)
+    - [Sorting](#sorting-1)
+    - [Recursion](#recursion)
+    - [Binary Tree](#binary-tree)
+    - [Heap - Priority Queue](#heap---priority-queue)
+    - [Sliding window](#sliding-window)
+    - [Graphs](#graphs-1)
+      - [Union Find](#union-find)
+      - [Topological sort](#topological-sort)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Search
 - Binary search
