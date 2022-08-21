@@ -61,6 +61,22 @@ in an ecommerce website. Different items have different fields.
 - Cassandra focuses on A and P. But it offers an option to tune consistency. We can choose how many replica nodes to say OK before marking
 the operation(read/write) as successful.
 
+### Databases that offer various compinations of C,A & P
+#### C and P
+- MongoDB
+- Redis
+- Memcache
+- BigTable
+- HBase
+
+#### A and P
+- Cassandra
+- Dynamo
+- CouchDB
+
+#### C and A
+- RDBMS (such as Oracle)
+
 ## Indexing
 
 ### Categories of indexing
