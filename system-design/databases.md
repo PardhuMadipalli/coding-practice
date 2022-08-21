@@ -4,6 +4,14 @@
 - [Coding practice Home](..)
 - [System Design Home](.)
 
+<!-- START doctoc -->
+<!-- END doctoc -->
+
+## Important points
+
+- When you really want ACID properties for some tables, but if they are not needed after sometime, 
+then you can use an RDBMS only for specific time period and then dump the data into Cassandra or some other DB.
+
 ## Database properties
 
 *Atomicity*: Entire operation must be done in a single transaction. A good example is debiting money from 
@@ -45,13 +53,28 @@ in an ecommerce website. Different items have different fields.
 - They are used when you need all the details related to an object. No expensive joins are needed to find all the details of a single object.
 - ACID transactions MAY not be guaranteed here.
 
-##### MongoDB
-- Guarantees ACID. On of the very NoSQL databases that does this.
+#### Columnar databases
+- Use for analytic workloads. Cassandra is one such database.
+
+#### Data-warehouses
+- Generally used to run analytics on large sets of data. Not used for realtime analytics. Example: Apache Hive
+
+## Popular databases
+
+#### MongoDB
+- Guarantees ACID. One of the very few NoSQL databases that do this.
 - We can update multiple documents in a single transaction, similarly to how we update multiple rows in a relational DB.
 - It offers synchronized replication also.
 
-#### Columnar databases
-- Use for analytic workloads. Cassandra is one such database.
+#### Cassandra
+- Does not guarantee ACID.
+- It's a columnar database.
+- Use this database when we have only a few queries to run on a large set of data. See [codeKarle system design video](https://youtu.be/EpASu_1dUdE?t=1810)
+- Each column cell consists of name, value and timestamp.
+- Updating a record is nothing but adding a new column with updated value and new timestamp. Old timestamp can be deleted by Cassandra after some time.
+- It has multiple shards and each shard can have multiple replicas.
+- It does NOT have MASTER-SLAVE architecture, but has peer-to-peer architecture. So as soon as one of the replicas receives the request, it executes it.
+- Very fast writes and sufficiently fast reads.
 
 ## CAP theorem in distributed databases
 - Only one out of consistency, availability and partition failure tolerance is guaranteed.
@@ -61,7 +84,8 @@ in an ecommerce website. Different items have different fields.
 - Cassandra focuses on A and P. But it offers an option to tune consistency. We can choose how many replica nodes to say OK before marking
 the operation(read/write) as successful.
 
-### Databases that offer various compinations of C,A & P
+
+### Databases that offer various combinations of C,A & P
 #### C and P
 - MongoDB
 - Redis
