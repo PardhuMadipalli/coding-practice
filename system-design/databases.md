@@ -33,6 +33,9 @@
     - [Primary](#primary)
     - [Clustered](#clustered)
     - [Secondary](#secondary)
+- [Violations and isolation levels in DBMS](#violations-and-isolation-levels-in-dbms)
+  - [Violations](#violations)
+  - [Isolation levels](#isolation-levels)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
