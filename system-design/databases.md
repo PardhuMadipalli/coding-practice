@@ -151,3 +151,21 @@ Created on the *ordered* non-key field of the table. Use preferably Sparse index
 
 #### Secondary
 Created on the *unordered* primary key of the table. Here only dense index is possible because the table is not ordered.
+
+## Violations and isolation levels in DBMS
+
+### Violations
+-*Dirty reads*: Occurs when transaction T1 reads data updated by Transaction T2 before committing. The problem is that 
+when T2 decides to rollback that change, then what T1 read earlier might be incorrect.
+- *Non-repeatable reads*: T1 select query reads some data. T2 updates the data and commits. T1 again runs the same select query.
+Now the data would look different.
+- *Phantom reads*: This is almost the same problem as non-repeatable reads. Except that here we worry about new records that are inserted between two(same) select queries.
+
+### Isolation levels
+
+| Isolation Level	                     | Dirty Read	|Nonrepeatable Read	| Phantom Read |
+|--------------------------------------|---------------|------------------|--------------|
+| Read uncommitted	                    |Possible	|Possible	| Possible     |
+| Read committed (default for Oracle)	 | Not possible |	Possible	| Possible     |
+| Repeatable read	                     | Not possible |	Not possible | 	Possible    |
+| Serializable	                        | Not possible |	Not possible | 	Not possible |
