@@ -22,7 +22,8 @@ public class SmallestTrimmedNumbers {
         }
         return answer;
     }
-
+    // https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/2484384/Best-java-solution-oror-best-time-complexity-oror-priority-queue
+    // O (n log k) time complexity
     public Node kthLargestElement(Node[] nodes, int k) {
 
         PriorityQueue<Node> queue = new PriorityQueue<>();

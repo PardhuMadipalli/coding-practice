@@ -1,9 +1,11 @@
 package miscellaneous;
 
 
+import javax.swing.plaf.IconUIResource;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -18,14 +20,49 @@ public class TrainProblem {
         20 18 29  120 118 129
 
          */
-        System.out.println(Solution.findPlatform2(
-                new int[]{10, 12, 21, 110, 112, 121, 210, 212, 221},
-                new int[]{20, 18, 29,  120, 118, 129, 220, 218, 229}, 9));
+        int[] arrs = {10, 12, 21, 110, 112, 121, 210, 212, 221};
+        int[] deps = {20, 18, 29,  120, 118, 129, 220, 218, 229};
+        System.out.println(Solution.findPlatform2(arrs, deps, 9));
+        System.out.println(Solution.clubTwoArrays(arrs, deps));
     }
 }
 
 class Solution
 {
+
+    static int clubTwoArrays(int[] arr, int[] dep)  {
+        TrainTime[] times = new TrainTime[2*arr.length];
+        for (int i = 0; i < 2*arr.length; i+=2) {
+            times[i] = new TrainTime(arr[i/2], true);
+            times[i+1] = new TrainTime(dep[i/2], false);
+        }
+        Arrays.sort(times, Comparator.comparingInt(TrainTime::getTime));
+        int count=0, max=0;
+        for (TrainTime time : times) {
+            if (time.isStart) {
+                count++;
+                max = Math.max(max, count);
+            } else {
+                count--;
+            }
+        }
+        return max;
+    }
+
+    static class TrainTime {
+        int time;
+        boolean isStart;
+
+        TrainTime(int t, boolean start) {
+            time=t;
+            isStart=start;
+        }
+
+        int getTime() {
+            return this.time;
+        }
+    }
+
     //Function to find the minimum number of platforms required at the
     //railway station such that no train waits.
     static int findPlatform1(int[] arr, int[] dep, int n)

@@ -47,7 +47,50 @@ public class LongestPalindromicSubstring {
         return m>=0 && n<len;
     }
 
+    int answer = 1;
+    String answerString = "";
+    int answerStart = 0;
+    int answerEnd = 0;
+    public String longestPalindromeDp(String s) {
+        final int n = s.length();
+        int[][] dp = new int[n][n];
+        for(int i=0; i<n; i++) {
+            dp[i][i] = 1;
+        }
+        answerString = s.substring(s.length()-1);
+        for(int end=0; end<n; end++) {
+            for(int start=0; start<end; start++) {
+                getDpMemoize(end,start, dp, s);
+            }
+        }
+        return s.substring(answerStart, answerEnd);
+    }
+
+    private int getDpMemoize(int end, int start, int[][] dp, String s) {
+        if(start >= end) {
+            return 1;
+        }
+        if(dp[end][start]!=0) {
+            return dp[end][start];
+        } else {
+            if(s.charAt(start)==s.charAt(end)) {
+                dp[end][start] = getDpMemoize(end-1, start+1, dp, s);
+                if(dp[end][start]==1) {
+                    if(end-start+1 > answer) {
+                        answer = end-start+1;
+                        answerStart = start;
+                        answerEnd = end+1;
+                    }
+                }
+            } else {
+                dp[end][start]=-1;
+            }
+        }
+        return dp[end][start];
+    }
+
     public static void main(String []args) {
-        System.out.println(new LongestPalindromicSubstring().longestPalindrome("dcabcbacd"));
+//        System.out.println(new LongestPalindromicSubstring().longestPalindrome("dcabcbacd"));
+        System.out.println(new LongestPalindromicSubstring().longestPalindromeDp("cbbd"));
     }
 }

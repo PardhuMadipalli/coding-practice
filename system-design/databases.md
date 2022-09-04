@@ -20,6 +20,7 @@
 - [Popular databases](#popular-databases)
     - [MongoDB](#mongodb)
     - [Cassandra](#cassandra)
+    - [HBase](#hbase)
 - [CAP theorem in distributed databases](#cap-theorem-in-distributed-databases)
   - [Databases that offer various combinations of C,A & P](#databases-that-offer-various-combinations-of-ca--p)
     - [C and P](#c-and-p)
@@ -33,6 +34,7 @@
     - [Primary](#primary)
     - [Clustered](#clustered)
     - [Secondary](#secondary)
+- [Database sharding](#database-sharding)
 - [Violations and isolation levels in DBMS](#violations-and-isolation-levels-in-dbms)
   - [Violations](#violations)
   - [Isolation levels](#isolation-levels)
@@ -101,12 +103,20 @@ in an ecommerce website. Different items have different fields.
 #### Cassandra
 - Does not guarantee ACID.
 - It's a columnar database.
+- Eventual consistency to all the replicas.
 - Use this database when we have only a few queries to run on a large set of data. See [codeKarle system design video](https://youtu.be/EpASu_1dUdE?t=1810)
 - Each column cell consists of name, value and timestamp.
 - Updating a record is nothing but adding a new column with updated value and new timestamp. Old timestamp can be deleted by Cassandra after some time.
 - It has multiple shards and each shard can have multiple replicas.
 - It does NOT have MASTER-SLAVE architecture, but has peer-to-peer architecture. So as soon as one of the replicas receives the request, it executes it.
 - Very fast writes and sufficiently fast reads.
+
+#### HBase
+- Colummnar
+- Based on BigTable
+- Consistent reads and writes
+- Automatic sharding, failover management etc.
+- Earlier used by Facebook Messenger after that moved from Cassandra.
 
 ## CAP theorem in distributed databases
 - Only one out of consistency, availability and partition failure tolerance is guaranteed.
@@ -155,14 +165,25 @@ Created on the *ordered* non-key field of the table. Use preferably Sparse index
 #### Secondary
 Created on the *unordered* primary key of the table. Here only dense index is possible because the table is not ordered.
 
+## Database sharding
+Horizontally partitioning the database is called sharding.
+- **Range sharding**: Sharding based on the range of a key. Here we have to maintain a lookup database to figure out which shard does the key belong to.
+If a partitcular shard is getting too much of traffic, we can add one more database node to handle it. A little easy to manage.
+
+- **Hashed sharding**: Shard based on the hash and mod value of the key. But disadvantage is that when we have to change the number of nodes, all our hashes have to be computed and 
+their data must be placed according to new mod value. Use consistent hashing to avoid some drawbacks.
+
+- **Geo-based sharding**: Database node will have information about the users belonging to that particular region. Use Google s2 library to shard.
+
+
 ## Violations and isolation levels in DBMS
 
 ### Violations
--*Dirty reads*: Occurs when transaction T1 reads data updated by Transaction T2 before committing. The problem is that 
+- **Dirty reads**: Occurs when transaction T1 reads data updated by Transaction T2 before committing. The problem is that 
 when T2 decides to rollback that change, then what T1 read earlier might be incorrect.
-- *Non-repeatable reads*: T1 select query reads some data. T2 updates the data and commits. T1 again runs the same select query.
+- **Non-repeatable reads**: T1 select query reads some data. T2 updates the data and commits. T1 again runs the same select query.
 Now the data would look different.
-- *Phantom reads*: This is almost the same problem as non-repeatable reads. Except that here we worry about new records that are inserted between two(same) select queries.
+- **Phantom reads**: This is almost the same problem as non-repeatable reads. Except that here we worry about new records that are inserted between two(same) select queries.
 
 ### Isolation levels
 

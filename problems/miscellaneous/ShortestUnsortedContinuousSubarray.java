@@ -11,9 +11,6 @@ public class ShortestUnsortedContinuousSubarray {
         int i;
         for(i=0; i<nums.length; i++) {
             if(!q.isEmpty() && nums[i] < nums[q.getLast()]) {
-                while (!q.isEmpty() && nums[i] < nums[q.getLast()]) {
-                    q.pollLast();
-                }
                 break;
             }
             q.addLast(i);
@@ -30,9 +27,6 @@ public class ShortestUnsortedContinuousSubarray {
         q.clear();
         for(i=nums.length-1; i>=0; i--){
             if(!q.isEmpty() && nums[i] > nums[q.getLast()]){
-                while (!q.isEmpty() && nums[i] > nums[q.getLast()]) {
-                    q.pollLast();
-                }
                 break;
             }
             q.addLast(i);

@@ -2,7 +2,6 @@ package problems.miscellaneous;
 
 // Java program to print sums
 // of all possible subsets.
-import java.io.*;
 
 public class SubsetSums {
 

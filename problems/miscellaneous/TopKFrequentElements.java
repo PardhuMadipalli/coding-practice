@@ -1,5 +1,6 @@
 package problems.miscellaneous;
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -12,7 +13,7 @@ public class TopKFrequentElements {
             map.merge(num, 1, Integer::sum);
         }
 
-        PriorityQueue<ElemFreq> q = new PriorityQueue<>((a,b) -> b.freq - a.freq);
+        PriorityQueue<ElemFreq> q = new PriorityQueue<>(Comparator.comparing(ElemFreq::getFreq, Comparator.reverseOrder()));
         for(Map.Entry<Integer, Integer> entry: map.entrySet()) {
             q.add(new ElemFreq(entry.getKey(), entry.getValue()));
         }
@@ -31,5 +32,7 @@ public class TopKFrequentElements {
             this.num = num;
             this.freq = freq;
         }
+
+        int getFreq() {return freq;}
     }
 }
