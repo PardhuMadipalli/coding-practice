@@ -15,6 +15,7 @@
   - [Consistent hashing](#consistent-hashing)
   - [Trie data structure](#trie-data-structure)
 - [Caching](#caching)
+  - [Cache eviction schemes](#cache-eviction-schemes)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
