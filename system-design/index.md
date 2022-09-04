@@ -14,6 +14,7 @@
   - [Entity design](#entity-design)
   - [Consistent hashing](#consistent-hashing)
   - [Trie data structure](#trie-data-structure)
+- [Caching](#caching)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

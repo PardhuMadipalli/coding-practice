@@ -42,9 +42,11 @@
     - [Binary Tree](#binary-tree)
     - [Heap - Priority Queue](#heap---priority-queue)
     - [Sliding window](#sliding-window)
+    - [No or constant extra space](#no-or-constant-extra-space)
     - [Graphs](#graphs-1)
       - [Union Find](#union-find)
       - [Topological sort](#topological-sort)
+      - [Breadth First Search](#breadth-first-search)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
