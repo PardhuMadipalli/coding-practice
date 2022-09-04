@@ -1,4 +1,4 @@
-package miscellaneous;
+package problems.miscellaneous;
 
 public class XorSequence {
     // Complete the xorSequence function below.

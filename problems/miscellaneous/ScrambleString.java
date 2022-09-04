@@ -1,4 +1,4 @@
-package miscellaneous;
+package problems.miscellaneous;
 
 
 import java.util.HashMap;

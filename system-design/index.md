@@ -24,6 +24,8 @@
 and process one after the other so that not many instances are needed at only midnight.
 - For any process that involves multiple services, use a field, something like a UUID to identify the operation. Pass this ID
 along to all the services using HTTP headers. Then you can filter logs based on this ID. It is similar to opc-request-id in OCI.
+- Use **retries** wherever we can for failed requests. It's better to implement these using **exponential backoff with jitter** mechanism. 
+Each further retry is delayed by an exponential delay with a final maximum delay. We have to jitter because, we may retry all the requests that we have at the same time which can increase load on the upstream server at the same time. Adding a jitter will help prevent it.
 
 ## To-Read
 
@@ -50,4 +52,13 @@ Fields: ID, student_id(FK), course_id(FK), Marks. Here marks indicate the score 
 - Used for searching and typeahead.
 - This needs a lot of space if using for 26 characters alphabet.
 - Better to use for binary characters.
+
+## Caching
+
+- **Read through**: Load data into cache only if there is a cache miss. Staleness is the problem until the cache entry reaches its expiry time.
+- **Write through**: First write into the cache, then write into the database and return the result to the user. Writes are slow, but reads are super-fast.
+- **Write behind**: First write into cache and return to the user. Asynchronously, database will be updated with the value written in the cache.
+- **Refresh ahead**: Refresh the entries in the cache every few seconds/certain time period. So data staleness won't be there for long.
+
+
 

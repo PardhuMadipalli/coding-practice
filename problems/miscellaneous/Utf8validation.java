@@ -1,4 +1,4 @@
-package miscellaneous;
+package problems.miscellaneous;
 
 public class Utf8validation {
     public boolean validUtf8(int[] data) {

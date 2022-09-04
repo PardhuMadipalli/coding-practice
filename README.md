@@ -156,6 +156,8 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 
 1. [Three sum problem](https://leetcode.com/problems/3sum)
 2. [Next Permutation](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/NextPermutation.java)
+3. [Longest substring without repeating characters: O(n) solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/2506453/Java-HashSet-%2B-Sliding-Window)
+4. [Minimum window substring](https://leetcode.com/problems/minimum-window-substring/)
 
 #### Diff array technique
 1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](problems/miscellaneous/CorpFlightBookings.java)
@@ -195,6 +197,10 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 #### Sliding window
 1. [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/)
 
+#### No or constant extra space
+1. [First Missing Positive](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/FirstMissingPositive.java)
+
+
 #### Graphs
 1. [Bipartite graph](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/BiPartiteGraph.java)
 
@@ -203,3 +209,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 
 ##### Topological sort
 1. [Course schedule two](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/CourseScheduleTwo.java) 
+2. [Course Schedule](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/CanFinishCourses.java)
+
+##### Breadth First Search
+1. [Word ladder II](https://leetcode.com/problems/word-ladder-ii/)
