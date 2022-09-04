@@ -61,5 +61,8 @@ Fields: ID, student_id(FK), course_id(FK), Marks. Here marks indicate the score 
 - **Write behind**: First write into cache and return to the user. Asynchronously, database will be updated with the value written in the cache.
 - **Refresh ahead**: Refresh the entries in the cache every few seconds/certain time period. So data staleness won't be there for long.
 
+### Cache eviction schemes
+
+- **Least Recently Used**: This can directly be implemented by [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html#LinkedHashMap-int-float-boolean-) in java.
 
 
