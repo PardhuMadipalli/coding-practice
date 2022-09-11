@@ -26,6 +26,7 @@
     - [Deletion](#deletion-1)
     - [Trie](#trie)
   - [Graphs](#graphs)
+    - [Graph vs Tree](#graph-vs-tree)
 - [Mathematical concepts](#mathematical-concepts)
 - [Problems list](#problems-list)
     - [Divide and Conquer](#divide-and-conquer)
@@ -34,8 +35,8 @@
     - [Two pointers](#two-pointers)
     - [Diff array technique](#diff-array-technique)
     - [Dynamic Programming (DP)](#dynamic-programming-dp)
-    - [Monotonic stack](#monotonic-stack)
     - [Using original indexes array](#using-original-indexes-array)
+    - [Bit manipulation](#bit-manipulation)
     - [Hashing](#hashing)
     - [Sorting](#sorting-1)
     - [Recursion](#recursion)
@@ -131,10 +132,26 @@ then delete it in the same manner as we delete the root. So deletion of an arbit
 ### Graphs
 - Maximum flow - min cut algorithm [Ford Fulkerson](https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/)
 
+#### Graph vs Tree
+- A tree is an undirected graph which is 
+  - connected: Every node must be able to reach all other nodes
+  - no cycle: A tree should not have a cycle
+- This is can be done using DFS as mentioned in this [Algo Monster Medium article](https://algomonster.medium.com/leetcode-261-graph-valid-tree-f27c212c1db1).
 
 ## Mathematical concepts
 
 - [Modular division and inverse](https://www.geeksforgeeks.org/modular-division/)
+- [Moyer-Moore Majority voting algorithm](https://www.geeksforgeeks.org/boyer-moore-majority-voting-algorithm/)
+- [Recursive sum of digits Leetcode](https://leetcode.com/problems/add-digits/solution/): Modulo of 9 or the base digit - 1
+```java
+class Solution {
+    public int addDigits(int num) {
+        if (num == 0) return 0;
+        if (num % 9 == 0) return 9;
+        return num % 9;
+    }
+}
+```
 
 
 ## Problems list
@@ -145,9 +162,11 @@ then delete it in the same manner as we delete the root. So deletion of an arbit
 #### Monotonic queue
 1. [Shortest Unsorted Continuous Subarray](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/ShortestUnsortedContinuousSubarray.java)
 2. [Sliding Window Maximum](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MaxSlidingWindow.java)
+3. [Remove duplicate numbers Leetcode](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/RemoveDuplicateLetters.java)
+4. [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java)
+
 
 #### Binary search
-
 [Binary search problems folder](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/binarysearch)
 
 1. You have to find not the exact match, but the least absolute distance to the elements in the array. [heaters problem](https://leetcode.com/problems/heaters/)
@@ -160,6 +179,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 2. [Next Permutation](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/NextPermutation.java)
 3. [Longest substring without repeating characters: O(n) solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/2506453/Java-HashSet-%2B-Sliding-Window)
 4. [Minimum window substring](https://leetcode.com/problems/minimum-window-substring/)
+5. [Minimum size subarray sum](https://leetcode.com/problems/minimum-size-subarray-sum/) This problem can be solved using cumulative sum method too. But it takes `O(n^2)` time.
 
 #### Diff array technique
 1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](problems/miscellaneous/CorpFlightBookings.java)
@@ -171,12 +191,20 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 4. [Maximum Profit in Job Scheduling](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/MaximumProfitInJobScheduling.java)
 5. [Palindrome partitioning](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/PalindromePartitioning.java)
 6. [Longest Valid Parentheses](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/LongestValidParentheses.java)
+7. A little tough: [Best time to buy and sell stock IV Leetcode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/discuss/2558269/JAVA-oror-Recursive-DP-Tabulation-and-Space-Optimization)
+8. [Bursting balloons](https://leetcode.com/problems/burst-balloons/discuss/2446689/Simple-Java-Solution-with-Explanation-DP)
 
-#### Monotonic stack
-1. [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java)
 
 #### Using original indexes array
 1. [Couples holding hands](https://leetcode.com/problems/couples-holding-hands/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/Coupleholdinghands.java)
+
+#### Bit manipulation
+
+This can be used in a lot of places. Some are:
+- Use XOR to find duplicates, swap numbers etc.
+- Efficient way to save whether a test case is covered or not. For example if there are a max of 32 elements in array and you want to track whether element is used, just set that bit to 1 in an integer.
+
+1. [Find non-duplicate number without extra space](https://leetcode.com/problems/single-number/)
 
 #### Hashing
 1. [Group anagrams](https://leetcode.com/problems/group-anagrams/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/GroupAnagrams.java)
@@ -185,6 +213,8 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 #### Sorting
 1. [Group anagrams](https://leetcode.com/problems/group-anagrams/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/GroupAnagrams.java)
 2. [My Calendar](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MyCalendar.java)
+3. :star: Sometimes numbers can be converted to strings and sorted. Here a custom comparator is used to figure which type of concatenation is better (a+b or b+a) - [Largest Number Leetcode](https://leetcode.com/problems/largest-number/solution/)
+4. A variation of merge sort - [Count of smaller numbers after self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/2556347/Java-ororMerge-Sort-Solution-oror)
 
 #### Recursion
 1. [House Robber Three](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/HouseRobberThree.java)
@@ -212,6 +242,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 ##### Topological sort
 1. [Course schedule two](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/CourseScheduleTwo.java) 
 2. [Course Schedule](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/CanFinishCourses.java)
+3. [Alien dictionary](https://leetcode.ca/2016-08-25-269-Alien-Dictionary/) The key is to understand that a dictionary problem is nothing but topological sort. 
 
 ##### Breadth First Search
 1. [Word ladder II](https://leetcode.com/problems/word-ladder-ii/)
