@@ -171,6 +171,8 @@ class Solution {
 
 1. You have to find not the exact match, but the least absolute distance to the elements in the array. [heaters problem](https://leetcode.com/problems/heaters/)
 
+##### Binary search over solution space
+1. [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/discuss/2553108/Java-oror-Binary-Search-oror-With-Full-and-Easy-Explanation)
 
 #### Two pointers
 Sometimes, you may have to sort the data when using this. Also this can be extended to three pointers and more.
@@ -180,6 +182,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 3. [Longest substring without repeating characters: O(n) solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/2506453/Java-HashSet-%2B-Sliding-Window)
 4. [Minimum window substring](https://leetcode.com/problems/minimum-window-substring/)
 5. [Minimum size subarray sum](https://leetcode.com/problems/minimum-size-subarray-sum/) This problem can be solved using cumulative sum method too. But it takes `O(n^2)` time.
+6. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/discuss/2468752/can-anyone-clarify-this-doubt). Also watch the YT video [here](https://youtu.be/gqXU1UyA8pk?t=726).
 
 #### Diff array technique
 1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](problems/miscellaneous/CorpFlightBookings.java)
@@ -193,7 +196,8 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 6. [Longest Valid Parentheses](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/LongestValidParentheses.java)
 7. A little tough: [Best time to buy and sell stock IV Leetcode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/discuss/2558269/JAVA-oror-Recursive-DP-Tabulation-and-Space-Optimization)
 8. [Bursting balloons](https://leetcode.com/problems/burst-balloons/discuss/2446689/Simple-Java-Solution-with-Explanation-DP)
-
+9. **LIS variant**: First sort the data based on one field, then find the LIS based on the second field.  [Russian doll envelopes](https://leetcode.com/problems/russian-doll-envelopes/discuss/2521874/Java-DP-based-on-Longest-Increasing-Subsequence)
+10. **LIS variant**: first sort and then check LIS property based on whether one is divisible by another. [Largest divisble subset](https://leetcode.com/problems/largest-divisible-subset/) 
 
 #### Using original indexes array
 1. [Couples holding hands](https://leetcode.com/problems/couples-holding-hands/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/Coupleholdinghands.java)
@@ -213,7 +217,7 @@ This can be used in a lot of places. Some are:
 #### Sorting
 1. [Group anagrams](https://leetcode.com/problems/group-anagrams/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/GroupAnagrams.java)
 2. [My Calendar](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MyCalendar.java)
-3. :star: Sometimes numbers can be converted to strings and sorted. Here a custom comparator is used to figure which type of concatenation is better (a+b or b+a) - [Largest Number Leetcode](https://leetcode.com/problems/largest-number/solution/)
+3. **Sometimes numbers can be converted to strings and sorted. Here a custom comparator is used to figure which type of concatenation is better (a+b or b+a)** - [Largest Number Leetcode](https://leetcode.com/problems/largest-number/solution/)
 4. A variation of merge sort - [Count of smaller numbers after self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/2556347/Java-ororMerge-Sort-Solution-oror)
 
 #### Recursion
@@ -230,6 +234,7 @@ This can be used in a lot of places. Some are:
 1. [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/)
 
 #### No or constant extra space
+See if you can manipulate the existing array/DS itself. For example, you can change the sign of the element etc to remember wehther visited or not.
 1. [First Missing Positive](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/FirstMissingPositive.java)
 
 
