@@ -32,6 +32,7 @@
     - [Divide and Conquer](#divide-and-conquer)
     - [Monotonic queue](#monotonic-queue)
     - [Binary search](#binary-search)
+      - [Binary search over solution space](#binary-search-over-solution-space)
     - [Two pointers](#two-pointers)
     - [Diff array technique](#diff-array-technique)
     - [Dynamic Programming (DP)](#dynamic-programming-dp)
