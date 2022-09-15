@@ -13,6 +13,7 @@
   - [Inheritance](#inheritance)
   - [Polymorphism](#polymorphism)
 - [Java Interview Questions](#java-interview-questions)
+  - [Multithreading](#multithreading)
     - [Can you access private members (methods and fields) of an object from outside the class?](#can-you-access-private-members-methods-and-fields-of-an-object-from-outside-the-class)
     - [Does HashMap allow null key?](#does-hashmap-allow-null-key)
     - [What are differences between abstract class and interface?](#what-are-differences-between-abstract-class-and-interface)
@@ -38,6 +39,9 @@ One item taking multiple forms is called polymorphism. For example method overlo
 - **[Producer Extends Consumer Super](https://stackoverflow.com/questions/4343202/difference-between-super-t-and-extends-t-in-java/4343547#4343547)**
 
 ## Java Interview Questions
+
+### Multithreading
+- [Multithreading problems](https://github.com/PardhuMadipalli/coding-practice/blob/main/javapractice/multithreading)
 
 #### Can you access private members (methods and fields) of an object from outside the class?
 Yes, we can access them using Java reflection API. 

@@ -48,7 +48,8 @@
     - [Graphs](#graphs-1)
       - [Union Find](#union-find)
       - [Topological sort](#topological-sort)
-      - [Breadth First Search](#breadth-first-search)
+      - [Breadth First Search (BFS)](#breadth-first-search-bfs)
+      - [Depth First Search (DFS)](#depth-first-search-dfs)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -165,7 +166,7 @@ class Solution {
 2. [Sliding Window Maximum](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MaxSlidingWindow.java)
 3. [Remove duplicate numbers Leetcode](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/RemoveDuplicateLetters.java)
 4. [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java)
-
+5. [Remove k digits Leetcode](https://leetcode.com/problems/remove-k-digits/discuss/2572477/Java-oror-Stack)
 
 #### Binary search
 [Binary search problems folder](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/binarysearch)
@@ -184,6 +185,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 4. [Minimum window substring](https://leetcode.com/problems/minimum-window-substring/)
 5. [Minimum size subarray sum](https://leetcode.com/problems/minimum-size-subarray-sum/) This problem can be solved using cumulative sum method too. But it takes `O(n^2)` time.
 6. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/discuss/2468752/can-anyone-clarify-this-doubt). Also watch the YT video [here](https://youtu.be/gqXU1UyA8pk?t=726).
+7. [Longest substring with at least k repeating characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/2444441/Java-Solution-or-Recursive-or-Sliding-Window)
 
 #### Diff array technique
 1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](problems/miscellaneous/CorpFlightBookings.java)
@@ -199,6 +201,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 8. [Bursting balloons](https://leetcode.com/problems/burst-balloons/discuss/2446689/Simple-Java-Solution-with-Explanation-DP)
 9. **LIS variant**: First sort the data based on one field, then find the LIS based on the second field.  [Russian doll envelopes](https://leetcode.com/problems/russian-doll-envelopes/discuss/2521874/Java-DP-based-on-Longest-Increasing-Subsequence)
 10. **LIS variant**: first sort and then check LIS property based on whether one is divisible by another. [Largest divisble subset](https://leetcode.com/problems/largest-divisible-subset/) 
+11. Similar to knapsack: [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/discuss/2532411/JAVA-solution-using-(subset-sum-equals-k))
 
 #### Using original indexes array
 1. [Couples holding hands](https://leetcode.com/problems/couples-holding-hands/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/Coupleholdinghands.java)
@@ -223,6 +226,7 @@ This can be used in a lot of places. Some are:
 
 #### Recursion
 1. [House Robber Three](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/HouseRobberThree.java)
+2. [Longest substring with at least k repeating characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/2444441/Java-Solution-or-Recursive-or-Sliding-Window)
 
 #### Binary Tree
 1. [House Robber Three](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/HouseRobberThree.java)
@@ -250,5 +254,8 @@ See if you can manipulate the existing array/DS itself. For example, you can cha
 2. [Course Schedule](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/CanFinishCourses.java)
 3. [Alien dictionary](https://leetcode.ca/2016-08-25-269-Alien-Dictionary/) The key is to understand that a dictionary problem is nothing but topological sort. 
 
-##### Breadth First Search
+##### Breadth First Search (BFS)
 1. [Word ladder II](https://leetcode.com/problems/word-ladder-ii/)
+
+##### Depth First Search (DFS)
+1. [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/2580074/Java-Solution-using-DFS)
