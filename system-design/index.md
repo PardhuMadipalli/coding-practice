@@ -16,6 +16,9 @@
   - [Trie data structure](#trie-data-structure)
 - [Caching](#caching)
   - [Cache eviction schemes](#cache-eviction-schemes)
+- [Good designs](#good-designs)
+  - [Data structure designs](#data-structure-designs)
+    - [Limit order book design](#limit-order-book-design)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

@@ -48,7 +48,8 @@
     - [Graphs](#graphs-1)
       - [Union Find](#union-find)
       - [Topological sort](#topological-sort)
-      - [Breadth First Search](#breadth-first-search)
+      - [Breadth First Search (BFS)](#breadth-first-search-bfs)
+      - [Depth First Search (DFS)](#depth-first-search-dfs)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
