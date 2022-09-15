@@ -39,6 +39,9 @@ One item taking multiple forms is called polymorphism. For example method overlo
 
 ## Java Interview Questions
 
+### Multithreading
+- [Multithreading problems](https://github.com/PardhuMadipalli/coding-practice/blob/main/javapractice/multithreading)
+
 #### Can you access private members (methods and fields) of an object from outside the class?
 Yes, we can access them using Java reflection API. 
 Check this [GeeksforGeeks article](https://www.geeksforgeeks.org/how-to-access-private-field-and-method-using-reflection-in-java) to understand how to do it.
