@@ -38,6 +38,12 @@ One item taking multiple forms is called polymorphism. For example method overlo
 - [Method overriding demo](https://github.com/PardhuMadipalli/coding-practice/blob/main/javapractice/MethodOverridingDemo.java)
 - **[Producer Extends Consumer Super](https://stackoverflow.com/questions/4343202/difference-between-super-t-and-extends-t-in-java/4343547#4343547)**
 
+## Reflection
+
+- Accessing classes, objects and their methods which is generally not possible using regular ways. This is used for writing libraries and other complicated. For example, you can create an instance of an object using just the class name. You can find if a Java item is tagged with a particular annonation and do some additional processing.
+
+## Java memory management
+
 ## Java Interview Questions
 
 ### Multithreading
