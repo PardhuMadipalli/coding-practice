@@ -12,6 +12,8 @@
   - [Encapsulation](#encapsulation)
   - [Inheritance](#inheritance)
   - [Polymorphism](#polymorphism)
+- [Reflection](#reflection)
+- [Java memory management](#java-memory-management)
 - [Java Interview Questions](#java-interview-questions)
   - [Multithreading](#multithreading)
     - [Can you access private members (methods and fields) of an object from outside the class?](#can-you-access-private-members-methods-and-fields-of-an-object-from-outside-the-class)
