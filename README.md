@@ -67,12 +67,12 @@
 - Time complexity O(n<sup>2</sup>)
 
 ### Merge sort
-- Time complexity is always O(nlog(n)), for all three cases worst, average and best cases. So, when you don't know about the input use merge sort.
+- Time complexity is always `O(nlog(n))`, for all three cases worst, average and best cases. So, when you don't know about the input use merge sort.
 - When using arrays
     - we need additional heap space of O(n) to keep the merged array.
     - A disadvantage is that it is not an in-place sort.
 - When using linked list
-    - no need for the additional heap space. We only need stack space to keep recursion information. So memory required is only O(log(n)).
+    - no need for the additional heap space. We only need stack space to keep recursion information. So memory required is only `O(log(n))`.
     - This is an in-place sort, because we only need to modify next pointers of the nodes.
 
 [Code for merge sort](sorting/MergeSort.java)   
@@ -91,8 +91,8 @@
 
 ### Binary Heap (min-heap)
 
-- This is always a complete binary tree.
-- So it can be represented easily in an array.
+- Use heap when you quickly want to find the smallest (or biggest) element in a collection.
+- This is always a complete binary tree. So it can be represented easily in an array.
 - Children of node at *i* will be at *2i-2* and *2i+2*. Parent of node *i* will be at *(i-1)/2*.
 - In a min-heap, a parent node will always be less than or equal to their children.
 
@@ -104,24 +104,25 @@
 
 #### Building
 - Initialize and keep on inserting all the nodes.
-- If you are inserting a total of n nodes, we might conclude that the whole operation takes O(n * log n) time. But remember that initially
-the size of tree is very smaller than O(log n). So, on careful calculation the building process takes O(n) time.
+- If you are inserting a total of n nodes, we might conclude that the whole operation takes `O(n * log n)` time. But remember that initially
+the size of tree is very smaller than `O(log n)`. So, on careful calculation the building process takes `O(n)` time.
 
 #### Deletion
 - You can only delete the root of a heap.
 - Replace the heap root with the last element.
 - Then start the heapify process from the root in a top-down manner.
-- Time complexity: O(log n) = O(height)
-- If you want to delete an intermediate element (as available in PriorityQueue Java), we first need to find the element by checking through each element, which takes O(n) operations and
+- Time complexity: `O(log n)` = `O(height)`
+- If you want to delete an intermediate element (as available in Java's PriotityQueue), we first need to find the element by checking through each element, which takes O(n) operations and
 then delete it in the same manner as we delete the root. So deletion of an arbitrary element takes `O(n)` complexity.
 
 ### Binary Search Tree
-- All the elements smaller than the root are on the left sub-tree and all higher are on the right sub-tree. This is valid for all underlying sub-tress too.
+- All the elements smaller than the root are on the left sub-tree and all higher are on the right sub-tree. This is valid for all underlying sub-trees too.
 - In-order traversal will print all values in a sorted manner. This concept can be used to find the kth smallest element.
 
 #### Insertion
 - Similar to search.
 - Go till you encounter a leaf node and attach to left/right depending on whether the new value is smaller/bigger than the leaf value.
+- Time complexity: `O(log n)` = `O(height)` for an average case. In the worst case, it can be `O(n)` as the tree can look like a straight line.
 
 #### Deletion
 - If node does not have any children, you can simply mark it as null.
