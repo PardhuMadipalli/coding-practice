@@ -28,7 +28,7 @@
   - [Graphs](#graphs)
     - [Graph vs Tree](#graph-vs-tree)
 - [Mathematical concepts](#mathematical-concepts)
-- [Problems list](#problems-list)
+- [Concepts and problems list](#concepts-and-problems-list)
     - [Divide and Conquer](#divide-and-conquer)
     - [Monotonic queue](#monotonic-queue)
     - [Binary search](#binary-search)
@@ -49,7 +49,10 @@
       - [Union Find](#union-find)
       - [Topological sort](#topological-sort)
       - [Breadth First Search (BFS)](#breadth-first-search-bfs)
+        - [Problems examples from chatGPT](#problems-examples-from-chatgpt)
+        - [Problems](#problems)
       - [Depth First Search (DFS)](#depth-first-search-dfs)
+        - [Problems list](#problems-list)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
