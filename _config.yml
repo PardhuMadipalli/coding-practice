@@ -2,6 +2,7 @@ theme: just-the-docs
 title: Coding Practice
 markdown: GFM
 timezone: Asia/Kolkata
-url: https://pardhumadipalli.github.io/coding-practice
+url: https://pardhumadipalli.github.io
+baseurl: /coding-practice/
 repository: PardhuMadipalli/coding-practice
 
