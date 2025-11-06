@@ -3,3 +3,8 @@ out/
 *.iml
 problems/miscellaneous/rough/*
 problems/miscellaneous/*Interview.java
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
