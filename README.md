@@ -139,7 +139,7 @@ then delete it in the same manner as we delete the root. So deletion of an arbit
 - A tree is an undirected graph which is 
   - connected: Every node must be able to reach all other nodes
   - no cycle: A tree should not have a cycle
-- This is can be done using DFS as mentioned in this [Algo Monster Medium article](https://algomonster.medium.com/leetcode-261-graph-valid-tree-f27c212c1db1).
+- The validation can be done using DFS as mentioned in this [Algo Monster Medium article](https://algomonster.medium.com/leetcode-261-graph-valid-tree-f27c212c1db1).
 
 ## Mathematical concepts
 
@@ -157,7 +157,7 @@ class Solution {
 ```
 
 
-## Problems list
+## Concepts and problems list
 
 #### Divide and Conquer
 1. A very good problem: [Longest Substring with At Least K Repeating Characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)
@@ -256,7 +256,35 @@ See if you can manipulate the existing array/DS itself. For example, you can cha
 3. [Alien dictionary](https://leetcode.ca/2016-08-25-269-Alien-Dictionary/) The key is to understand that a dictionary problem is nothing but topological sort. 
 
 ##### Breadth First Search (BFS)
+- Used when you want to find the closest path in an unweighted graph.
+- We have to use Dijkstra's etc when the graph is weighted.
+- Note that for some problems we may use multi-source BFS, where multiple datapoints can be source.
+###### Problems examples from [chatGPT](https://chatgpt.com/share/690c6924-c07c-8006-9ef8-3c346bcc2bcf)
+| Category                                           | Example Problem / Use                                                                                                                                                                           |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Graph traversal**                                | Visiting all vertices in an undirected or directed graph.                                                                                                                                       |
+| **Shortest path in unweighted graphs**             | Find minimum number of edges between two nodes.                                                                                                                                                 |
+| **Grid / matrix problems**                         | - Shortest path in a maze<br>- Minimum steps to reach destination<br>- Flood fill (like Paint Bucket tool)<br>- Rotten oranges problem (multi-source BFS)<br>- Knight’s minimum moves in chess. |
+| **Tree problems**                                  | - Level order traversal (print nodes level by level)<br>- Find depth or height of tree<br>- Connect nodes at same level.                                                                        |
+| **Social network / web crawling**                  | - Find degree of connection (e.g., “friends of friends” up to 3 levels)<br>- Crawling webpages up to N links away.                                                                              |
+| **Word or transformation puzzles**                 | - Word Ladder (minimum transformations from “hit” → “cog”)                                                                                                                                      |
+| **State space / shortest transformation problems** | - Minimum number of operations to convert one number/state to another (e.g., multiply by 2 or subtract 1 to reach target).                                                                      |
+| **AI / Games**                                     | - Find minimum number of moves (like in puzzles: 8-puzzle, sliding tiles, Rubik’s Cube – if branching is small).                                                                                |
+| **Network broadcasting**                           | - Find time to spread message through network (multi-source BFS).                                                                                                                               |
+
+
+###### Problems
 1. [Word ladder II](https://leetcode.com/problems/word-ladder-ii/)
 
 ##### Depth First Search (DFS)
+- Finding any valid path: DFS is effective when you need to find any path between two nodes or check if a path exists, especially when the solution might be deep within the graph.
+- Puzzle solving: It is well-suited for puzzles with a single solution, such as mazes or Sudoku, because it can systematically explore one path until it reaches a dead end or a solution.
+- Cycle detection: DFS can determine if a graph contains any cycles.
+- Topological sorting: It is used to find a linear ordering of vertices in a directed acyclic graph (DAG).
+- Connected components: You can use DFS to find all the connected components within an undirected graph.
+- Backtracking algorithms: DFS is a fundamental part of backtracking algorithms, where a solution is built incrementally, and if a path does not lead to a solution, the algorithm "backtracks" to try a different path.
+- Web crawling: A website crawler can use DFS to explore links and go deep into a website's structure before returning to explore other links.
+- AI and game theory: It is used in AI for tasks like game-tree search, where the system explores possible moves and counter-moves to find a winning strategy. 
+
+###### Problems list
 1. [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/2580074/Java-Solution-using-DFS)
