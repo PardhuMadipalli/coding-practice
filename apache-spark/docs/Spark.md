@@ -1,4 +1,10 @@
-# Apache Spark
+---
+title: Big data and processing
+permalink: big-data-processing
+---
+# Big Data and Processing
+
+## Apache Spark
 
 A successor to MapReduce. Like MapReduce we split the data and process it across nodes. Spark persists data mostly in the memory and 
 will only uses disk if it overflows. This is unlike mapReduce which will always persist the data on the disk.
@@ -13,3 +19,7 @@ Spark shuffles the data across executors by using RPC calls(Netty).
 
 Spark doesn't run any transformations unless it encounters an action. An action is something like a reduce operation where data needs 
 to be shuffled across executors.
+
+## Apache Flint
+
+This is a successor to Spark that is mainly designed for stream event processing rather than batch processing.

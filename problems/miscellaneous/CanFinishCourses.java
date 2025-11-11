@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Asked in Byju's interview by InterviewVector (taken from Leetcode).
+
+// Here we are checking if there is a cycle or not by seeing if the inStack is true 
+// for any node while the node is being visted.
 public class CanFinishCourses {
 
     public boolean canFinish(int numCourses, int[][] prerequisites) {

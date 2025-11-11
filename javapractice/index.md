@@ -1,7 +1,8 @@
+---
+permalink: java-and-oop
+title: Java and OOP
+---
 # Java and Object-Oriented Programming
-
-**Index**
-- [Coding Practice Home](..)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
