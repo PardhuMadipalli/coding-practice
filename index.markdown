@@ -78,7 +78,8 @@ nav_order: 1
     - no need for the additional heap space. We only need stack space to keep recursion information. So memory required is only `O(log(n))`.
     - This is an in-place sort, because we only need to modify next pointers of the nodes.
 
-[Code for merge sort](sorting/MergeSort.java)   
+- [Code for merge sort]({{ site.code_path }}sorting/MergeSort.java)
+- [Code for merge sort with linked list](https://www.geeksforgeeks.org/dsa/merge-sort-for-linked-list/)
 
 ### Quick sort
 - Time complexity
@@ -88,7 +89,7 @@ nav_order: 1
 - Quick sort is not stable.
 - This is in-place and is faster when good partition strategies are used.
 
-[Code for quick sort](sorting/QuickSort.java)
+[Code for quick sort]({{ site.code_path }}sorting/QuickSort.java)
 
 ## Data structures
 
@@ -262,6 +263,7 @@ See if you can manipulate the existing array/DS itself. For example, you can cha
 - Used when you want to find the closest path in an unweighted graph.
 - We have to use Dijkstra's etc when the graph is weighted.
 - Note that for some problems we may use multi-source BFS, where multiple datapoints can be source.
+- When we are tracing one layer after the other, we may need to store the parent element of the current element. For example, in a word ladder problem, we may need to store the parent word to trace the path back.
 ###### Problems examples from [chatGPT](https://chatgpt.com/share/690c6924-c07c-8006-9ef8-3c346bcc2bcf)
 | Category                                           | Example Problem / Use                                                                                                                                                                           |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

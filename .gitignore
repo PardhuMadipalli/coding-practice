@@ -1,6 +1,7 @@
 .idea/
 out/
 *.iml
+*.class
 problems/miscellaneous/rough/*
 problems/miscellaneous/*Interview.java
 _site
