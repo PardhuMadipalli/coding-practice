@@ -1,9 +1,11 @@
 theme: just-the-docs
 title: Coding Practice
-markdown: GFM
+markdown: kramdown
 timezone: Asia/Kolkata
 url: https://pardhumadipalli.github.io
 baseurl: /coding-practice
 repository: PardhuMadipalli/coding-practice
 
+favicon_ico: "/assets/images/favicon.png"
+color_scheme: light
 code_path: https://github.com/PardhuMadipalli/coding-practice/blob/main/

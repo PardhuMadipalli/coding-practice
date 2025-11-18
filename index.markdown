@@ -6,6 +6,8 @@ layout: home
 title: Home
 nav_order: 1
 ---
+{:toc}
+**Table ends here**
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
@@ -80,6 +82,7 @@ nav_order: 1
 
 - [Code for merge sort]({{ site.code_path }}sorting/MergeSort.java)
 - [Code for merge sort with linked list](https://www.geeksforgeeks.org/dsa/merge-sort-for-linked-list/)
+  - In this code, the author used _recursion_ intelligently in the merge function.
 
 ### Quick sort
 - Time complexity
