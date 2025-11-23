@@ -4,6 +4,7 @@
 
 layout: page
 title: System Design
+nav_order: 2
 ---
 
 # System Design

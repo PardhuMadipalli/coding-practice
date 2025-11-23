@@ -2,61 +2,11 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
-title: Home
+layout: custom_page
+title: DSA
 nav_order: 1
 ---
-{:toc}
-**Table ends here**
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
-
-- [Search](#search)
-- [Sorting](#sorting)
-  - [Insertion sort](#insertion-sort)
-  - [Bubble sort](#bubble-sort)
-  - [Merge sort](#merge-sort)
-  - [Quick sort](#quick-sort)
-- [Data structures](#data-structures)
-  - [Binary Heap (min-heap)](#binary-heap-min-heap)
-    - [Insertion](#insertion)
-    - [Building](#building)
-    - [Deletion](#deletion)
-  - [Binary Search Tree](#binary-search-tree)
-    - [Insertion](#insertion-1)
-    - [Deletion](#deletion-1)
-    - [Trie](#trie)
-  - [Graphs](#graphs)
-    - [Graph vs Tree](#graph-vs-tree)
-- [Mathematical concepts](#mathematical-concepts)
-- [Concepts and problems list](#concepts-and-problems-list)
-    - [Divide and Conquer](#divide-and-conquer)
-    - [Monotonic queue](#monotonic-queue)
-    - [Binary search](#binary-search)
-      - [Binary search over solution space](#binary-search-over-solution-space)
-    - [Two pointers](#two-pointers)
-    - [Diff array technique](#diff-array-technique)
-    - [Dynamic Programming (DP)](#dynamic-programming-dp)
-    - [Using original indexes array](#using-original-indexes-array)
-    - [Bit manipulation](#bit-manipulation)
-    - [Hashing](#hashing)
-    - [Sorting](#sorting-1)
-    - [Recursion](#recursion)
-    - [Binary Tree](#binary-tree)
-    - [Heap - Priority Queue](#heap---priority-queue)
-    - [Sliding window](#sliding-window)
-    - [No or constant extra space](#no-or-constant-extra-space)
-    - [Graphs](#graphs-1)
-      - [Union Find](#union-find)
-      - [Topological sort](#topological-sort)
-      - [Breadth First Search (BFS)](#breadth-first-search-bfs)
-        - [Problems examples from chatGPT](#problems-examples-from-chatgpt)
-        - [Problems](#problems)
-      - [Depth First Search (DFS)](#depth-first-search-dfs)
-        - [Problems list](#problems-list)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+# Data Structures and Algorithms
 
 ## Search
 - Binary search
@@ -82,7 +32,10 @@ nav_order: 1
 
 - [Code for merge sort]({{ site.code_path }}sorting/MergeSort.java)
 - [Code for merge sort with linked list](https://www.geeksforgeeks.org/dsa/merge-sort-for-linked-list/)
-  - In this code, the author used _recursion_ intelligently in the merge function.
+
+    {: .note }
+    In this code, the author used _recursion_ intelligently in the merge function.
+
 
 ### Quick sort
 - Time complexity
@@ -152,14 +105,16 @@ then delete it in the same manner as we delete the root. So deletion of an arbit
 
 - [Modular division and inverse](https://www.geeksforgeeks.org/modular-division/)
 - [Moyer-Moore Majority voting algorithm](https://www.geeksforgeeks.org/boyer-moore-majority-voting-algorithm/)
-- [Recursive sum of digits Leetcode](https://leetcode.com/problems/add-digits/solution/): Modulo of 9 or the base digit - 1
+- [Recursive sum of digits Leetcode](https://leetcode.com/problems/add-digits/solution/): 
 ```java
-class Solution {
-    public int addDigits(int num) {
-        if (num == 0) return 0;
-        if (num % 9 == 0) return 9;
-        return num % 9;
-    }
+// Modulo of 9 or the base digit - 1
+// A number abcd is same as a+b+c+d(= s) in the modulo 9 world. 
+// The number s again is same as sum of digits in `s`
+// When you repeat this process until there is only 1 digit remaining, that is the answer.
+public int addDigits(int num) {
+    if (num == 0) return 0;
+    if (num % 9 == 0) return 9;
+    return num % 9;
 }
 ```
 
@@ -167,7 +122,16 @@ class Solution {
 ## Concepts and problems list
 
 #### Divide and Conquer
+
 1. A very good problem: [Longest Substring with At Least K Repeating Characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)
+    - The problem can also be using Sliding Window `O(n)` approach.
+    - Divide and conquer solution is `O(n * log_n)`
+    - [D&C solution]({{ site.code_path }}problems/miscellaneous/LongestSubstring.java)
+   
+    {: .note }
+    In this code, we should use int[] instead of map to store the counts of characters to significantly reduce the time needed for execution. 
+
+2. hello
 
 #### Monotonic queue
 1. [Shortest Unsorted Continuous Subarray](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/ShortestUnsortedContinuousSubarray.java)
@@ -187,13 +151,14 @@ class Solution {
 #### Two pointers
 Sometimes, you may have to sort the data when using this. Also this can be extended to three pointers and more.
 
-1. [Three sum problem](https://leetcode.com/problems/3sum)
-2. [Next Permutation](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/NextPermutation.java)
+1. [Three sum problem](https://leetcode.com/problems/3sum) - [Solution]({{ site.code_path }}problems/miscellaneous/ThreeSum.java)
+2. [Next Permutation problem](https://leetcode.com/problems/next-permutation/description/) - [Solution]({{ site.code_path }}problems/miscellaneous/NextPermutationTwo.java)
 3. [Longest substring without repeating characters: O(n) solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/2506453/Java-HashSet-%2B-Sliding-Window)
 4. [Minimum window substring](https://leetcode.com/problems/minimum-window-substring/)
 5. [Minimum size subarray sum](https://leetcode.com/problems/minimum-size-subarray-sum/) This problem can be solved using cumulative sum method too. But it takes `O(n^2)` time.
 6. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/discuss/2468752/can-anyone-clarify-this-doubt). Also watch the YT video [here](https://youtu.be/gqXU1UyA8pk?t=726).
-7. [Longest substring with at least k repeating characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/2444441/Java-Solution-or-Recursive-or-Sliding-Window)
+7. Longest substring with at least k repeating characters - [Explanation 1](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/2444441/Java-Solution-or-Recursive-or-Sliding-Window), [Explanation 2](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/solutions/170010/java-on-solution-with-detailed-explanati-d8q9/)
+   - The trick is to identify the logic based on what you can move the left and right pointers. So we identify a new problem where we want to use only _T_ unique characters. We increase the T from 1 to 26 (or the maximum number of unique chars in the string). Find the max of all the solutions of various T's.
 
 #### Diff array technique
 1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](problems/miscellaneous/CorpFlightBookings.java)
@@ -268,6 +233,7 @@ See if you can manipulate the existing array/DS itself. For example, you can cha
 - Note that for some problems we may use multi-source BFS, where multiple datapoints can be source.
 - When we are tracing one layer after the other, we may need to store the parent element of the current element. For example, in a word ladder problem, we may need to store the parent word to trace the path back.
 ###### Problems examples from [chatGPT](https://chatgpt.com/share/690c6924-c07c-8006-9ef8-3c346bcc2bcf)
+
 | Category                                           | Example Problem / Use                                                                                                                                                                           |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Graph traversal**                                | Visiting all vertices in an undirected or directed graph.                                                                                                                                       |

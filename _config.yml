@@ -9,3 +9,25 @@ repository: PardhuMadipalli/coding-practice
 favicon_ico: "/assets/images/favicon.png"
 color_scheme: light
 code_path: https://github.com/PardhuMadipalli/coding-practice/blob/main/
+
+callouts:
+  note:
+    color: blue
+
+plugins:
+  - jekyll-toc
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      toc: true
+
+exclude:
+  - "*.java"
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - "*.iml"

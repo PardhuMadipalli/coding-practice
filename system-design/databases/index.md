@@ -8,46 +8,10 @@ parent: System Design
 ---
 # Databases
 
-##### Index
-- [Coding practice Home](..)
-- [System Design Home](.)
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
+- Table of contents
+{:toc}
 
-- [Important points](#important-points)
-- [Database properties](#database-properties)
-- [Database types](#database-types)
-  - [SQL relational databases](#sql-relational-databases)
-  - [Non relational databases](#non-relational-databases)
-    - [Key value stores](#key-value-stores)
-    - [Document databases](#document-databases)
-    - [Columnar databases](#columnar-databases)
-    - [Data-warehouses](#data-warehouses)
-- [Popular databases](#popular-databases)
-    - [MongoDB](#mongodb)
-    - [Cassandra](#cassandra)
-    - [HBase](#hbase)
-- [CAP theorem in distributed databases](#cap-theorem-in-distributed-databases)
-  - [Databases that offer various combinations of C,A & P](#databases-that-offer-various-combinations-of-ca--p)
-    - [C and P](#c-and-p)
-    - [A and P](#a-and-p)
-    - [C and A](#c-and-a)
-- [Indexing](#indexing)
-  - [Categories of indexing](#categories-of-indexing)
-    - [Dense Indexing](#dense-indexing)
-    - [Sparse indexing](#sparse-indexing)
-  - [Types of indexing](#types-of-indexing)
-    - [Primary](#primary)
-    - [Clustered](#clustered)
-    - [Secondary](#secondary)
-- [Database sharding](#database-sharding)
-- [Violations and isolation levels in DBMS](#violations-and-isolation-levels-in-dbms)
-  - [Violations](#violations)
-  - [Isolation levels](#isolation-levels)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Important points
 
