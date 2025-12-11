@@ -2,17 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: custom_page
 title: Databases
 parent: System Design
 ---
-# Databases
-
-**Table of Contents**
-- Table of contents
-{:toc}
-
-
 ## Important points
 
 - When you really want ACID properties for some tables, but if they are not needed after sometime, 

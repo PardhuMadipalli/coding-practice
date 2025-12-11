@@ -1,21 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
-
-- [Points](#points)
-- [To-Read](#to-read)
-- [Miscellaneous](#miscellaneous)
-  - [Entity design](#entity-design)
-  - [Consistent hashing](#consistent-hashing)
-  - [Trie data structure](#trie-data-structure)
-- [Caching](#caching)
-  - [Cache eviction schemes](#cache-eviction-schemes)
-- [Good designs](#good-designs)
-  - [Data structure designs](#data-structure-designs)
-    - [Limit order book design](#limit-order-book-design)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
