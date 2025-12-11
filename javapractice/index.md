@@ -2,19 +2,22 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Java and Object-Oriented Programming](#java-and-object-oriented-programming)
-  - [OOP Concepts](#oop-concepts)
-    - [Abstraction](#abstraction)
-    - [Encapsulation](#encapsulation)
-    - [Inheritance](#inheritance)
-    - [Polymorphism](#polymorphism)
-  - [Reflection](#reflection)
-  - [Java memory management](#java-memory-management)
-  - [Java Interview Questions](#java-interview-questions)
-    - [Multithreading](#multithreading)
-      - [Can you access private members (methods and fields) of an object from outside the class?](#can-you-access-private-members-methods-and-fields-of-an-object-from-outside-the-class)
-      - [Does HashMap allow null key?](#does-hashmap-allow-null-key)
-      - [What are differences between abstract class and interface?](#what-are-differences-between-abstract-class-and-interface)
+- [permalink: java-and-oop
+title: Java and OOP
+nav_order: 3
+layout: custom_page](#permalink-java-and-oop%0Atitle-java-and-oop%0Anav_order-3%0Alayout-custom_page)
+- [OOP Concepts](#oop-concepts)
+  - [Abstraction](#abstraction)
+  - [Encapsulation](#encapsulation)
+  - [Inheritance](#inheritance)
+  - [Polymorphism](#polymorphism)
+- [Reflection](#reflection)
+- [Java memory management](#java-memory-management)
+- [Java Interview Questions](#java-interview-questions)
+  - [Multithreading](#multithreading)
+    - [Can you access private members (methods and fields) of an object from outside the class?](#can-you-access-private-members-methods-and-fields-of-an-object-from-outside-the-class)
+    - [Does HashMap allow null key?](#does-hashmap-allow-null-key)
+    - [What are differences between abstract class and interface?](#what-are-differences-between-abstract-class-and-interface)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
