@@ -3,9 +3,6 @@ layout: custom_page
 title: Miscellaneous
 nav_order: Z
 ---
-
-# Miscellaneous
-
 ## Regex
 
 - Most modern regex engines work using state machines and backtracking. Match 1st token, match 2nd token, if doesn't match, move to the next character and start the search again.

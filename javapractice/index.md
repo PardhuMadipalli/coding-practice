@@ -22,15 +22,8 @@
 permalink: java-and-oop
 title: Java and OOP
 nav_order: 3
-layout: page
+layout: custom_page
 ---
-# Java and Object-Oriented Programming
-
-**Table of Contents**
-- Table of contents
-{:toc}
-
-
 ## OOP Concepts
 
 ### Abstraction

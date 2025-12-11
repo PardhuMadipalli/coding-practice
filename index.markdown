@@ -6,8 +6,6 @@ layout: custom_page
 title: DSA
 nav_order: 1
 ---
-# Data Structures and Algorithms
-
 ## Search
 - Binary search
   - [binary Helper codes](https://github.com/PardhuMadipalli/coding-practice/blob/main/binarysearch)
@@ -22,7 +20,7 @@ nav_order: 1
 - Time complexity O(n<sup>2</sup>)
 
 ### Merge sort
-- Time complexity is always `O(nlog(n))`, for all three cases worst, average and best cases. So, when you don't know about the input use merge sort.
+- Time complexity is always $$O(nlog(n))$$, for all three cases worst, average and best cases. So, when you don't know about the input use merge sort.
 - When using arrays
     - we need additional heap space of O(n) to keep the merged array.
     - A disadvantage is that it is not an in-place sort.
@@ -135,7 +133,7 @@ public int addDigits(int num) {
 
 #### Monotonic queue
 1. [Shortest Unsorted Continuous Subarray](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/ShortestUnsortedContinuousSubarray.java)
-2. [Sliding Window Maximum](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/MaxSlidingWindow.java)
+2. [Sliding Window Maximum problem 🔗](https://leetcode.com/problems/sliding-window-maximum/) - [Solution 🔗]({{ site.code_path }}problems/miscellaneous/MaxSlidingWindow.java)
 3. [Remove duplicate numbers Leetcode](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/RemoveDuplicateLetters.java)
 4. [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java)
 5. [Remove k digits Leetcode](https://leetcode.com/problems/remove-k-digits/discuss/2572477/Java-oror-Stack)
@@ -153,8 +151,8 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 
 1. [Three sum problem](https://leetcode.com/problems/3sum) - [Solution]({{ site.code_path }}problems/miscellaneous/ThreeSum.java)
 2. [Next Permutation problem](https://leetcode.com/problems/next-permutation/description/) - [Solution]({{ site.code_path }}problems/miscellaneous/NextPermutationTwo.java)
-3. [Longest substring without repeating characters: O(n) solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/2506453/Java-HashSet-%2B-Sliding-Window)
-4. [Minimum window substring](https://leetcode.com/problems/minimum-window-substring/)
+3. [Longest substring without repeating characters 🔗](https://leetcode.com/problems/longest-substring-without-repeating-characters/) - [My solution 🔗](https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/7369905/two-pointer-approach-boolean-array-to-st-1zgx)
+4. [Minimum window substring Problem 🔗](https://leetcode.com/problems/minimum-window-substring/) - [Solution link 🔗](https://leetcode.com/problems/minimum-window-substring/solutions/7325527/beginner-friendly-solution-9976-beats-sl-gn3n/)
 5. [Minimum size subarray sum](https://leetcode.com/problems/minimum-size-subarray-sum/) This problem can be solved using cumulative sum method too. But it takes `O(n^2)` time.
 6. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/discuss/2468752/can-anyone-clarify-this-doubt). Also watch the YT video [here](https://youtu.be/gqXU1UyA8pk?t=726).
 7. Longest substring with at least k repeating characters - [Explanation 1](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/2444441/Java-Solution-or-Recursive-or-Sliding-Window), [Explanation 2](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/solutions/170010/java-on-solution-with-detailed-explanati-d8q9/)

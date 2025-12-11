@@ -4,6 +4,10 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 // https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
+
+/**
+ * For solution without using queue, {@link ShortestUnsortedContinuousSubarray2}
+ */
 public class ShortestUnsortedContinuousSubarray {
     public int findUnsortedSubarray(int[] nums) {
         // increasing monotonic queue

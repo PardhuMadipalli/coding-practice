@@ -31,3 +31,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - "*.iml"
+  - out/
+  - .idea/

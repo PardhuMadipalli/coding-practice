@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: custom_page
 title: Database Locks
 parent: Databases
 ---

@@ -1,5 +1,14 @@
 ---
 layout: page
 ---
-<b>Table of Contents</b>
-{{ content | toc }}
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+<h1>{{ page.title }}</h1>
+<div id="table-of-contents">
+    <details markdown="block">
+        <summary>
+            Table of contents
+        </summary>
+        {{ content | toc_only }}
+    </details>
+</div>
+{{ content }}

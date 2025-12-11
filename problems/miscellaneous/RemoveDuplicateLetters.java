@@ -11,8 +11,10 @@ public class RemoveDuplicateLetters {
         //Find Frequency
         int[] frequency = new int[26];
 
-        for (int i = 0; i < s.length(); i++) {
-            frequency[s.charAt(i) - 'a']++;
+        char[] arr = s.toCharArray();
+
+        for (char c : arr) {
+            frequency[c - 'a']++;
         }
 
         //Maintain seen array.
@@ -24,15 +26,16 @@ public class RemoveDuplicateLetters {
         //Montonic stack - Keep it increasing order
         Deque<Character> stack = new ArrayDeque<>();
 
-        for (int i = 0; i < s.length(); i++) {
-            Character currentCharacter = s.charAt(i);
-
+        for (char currentCharacter : arr) {
             if (seen[currentCharacter - 'a']) {
                 frequency[currentCharacter - 'a']--;
+                // no need to add it as it is already added
                 continue;
             }
 
-            while (!stack.isEmpty() && stack.getLast() > currentCharacter && frequency[stack.getLast() - 'a'] > 0) {
+            while (!stack.isEmpty()
+                    && stack.getLast() > currentCharacter
+                    && frequency[stack.getLast() - 'a'] > 0) {
                 seen[stack.removeLast() - 'a'] = false; // pop it, we will add this to the queue later
             }
 
@@ -44,9 +47,9 @@ public class RemoveDuplicateLetters {
         StringBuilder answer = new StringBuilder();
 
         while (!stack.isEmpty()){
-            answer.append(stack.removeLast());
+            answer.append(stack.removeFirst());
         }
-        return answer.reverse().toString();
+        return answer.toString();
     }
 
     public static void main(String[] args) {
