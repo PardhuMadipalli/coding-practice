@@ -4,7 +4,7 @@
 
 layout: custom_page
 title: Databases
-parent: System Design
+nav_order: 3
 ---
 ## Important points
 

@@ -134,7 +134,7 @@ public int addDigits(int num) {
 #### Monotonic queue
 1. [Shortest Unsorted Continuous Subarray](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/ShortestUnsortedContinuousSubarray.java)
 2. [Sliding Window Maximum problem 🔗](https://leetcode.com/problems/sliding-window-maximum/) - [Solution 🔗]({{ site.code_path }}problems/miscellaneous/MaxSlidingWindow.java)
-3. [Remove duplicate numbers Leetcode](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/RemoveDuplicateLetters.java)
+3. [Remove duplicate numbers Leetcode 🔗](https://leetcode.com/problems/remove-duplicate-letters) - [Solution 🔗]({{ site.code_path }}problems/miscellaneous/RemoveDuplicateLetters.java)
 4. [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java)
 5. [Remove k digits Leetcode](https://leetcode.com/problems/remove-k-digits/discuss/2572477/Java-oror-Stack)
 
@@ -153,7 +153,7 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 2. [Next Permutation problem](https://leetcode.com/problems/next-permutation/description/) - [Solution]({{ site.code_path }}problems/miscellaneous/NextPermutationTwo.java)
 3. [Longest substring without repeating characters 🔗](https://leetcode.com/problems/longest-substring-without-repeating-characters/) - [My solution 🔗](https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/7369905/two-pointer-approach-boolean-array-to-st-1zgx)
 4. [Minimum window substring Problem 🔗](https://leetcode.com/problems/minimum-window-substring/) - [Solution link 🔗](https://leetcode.com/problems/minimum-window-substring/solutions/7325527/beginner-friendly-solution-9976-beats-sl-gn3n/)
-5. [Minimum size subarray sum](https://leetcode.com/problems/minimum-size-subarray-sum/) This problem can be solved using cumulative sum method too. But it takes `O(n^2)` time.
+5. [Minimum size subarray sum 🔗](https://leetcode.com/problems/minimum-size-subarray-sum/) - [Solution link 🔗](https://leetcode.com/problems/minimum-size-subarray-sum/solutions/7415019/beats-100-optimal-sliding-window-solutio-fi85) This problem can be solved using cumulative sum method too. But it takes `O(n^2)` time.
 6. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/discuss/2468752/can-anyone-clarify-this-doubt). Also watch the YT video [here](https://youtu.be/gqXU1UyA8pk?t=726).
 7. Longest substring with at least k repeating characters - [Explanation 1](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/2444441/Java-Solution-or-Recursive-or-Sliding-Window), [Explanation 2](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/solutions/170010/java-on-solution-with-detailed-explanati-d8q9/)
    - The trick is to identify the logic based on what you can move the left and right pointers. So we identify a new problem where we want to use only _T_ unique characters. We increase the T from 1 to 26 (or the maximum number of unique chars in the string). Find the max of all the solutions of various T's.

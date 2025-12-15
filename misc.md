@@ -1,7 +1,7 @@
 ---
 layout: custom_page
 title: Miscellaneous
-nav_order: Z
+nav_order: 100
 ---
 ## Regex
 

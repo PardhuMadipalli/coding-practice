@@ -12,10 +12,19 @@ nav_order: 2
 - When an application is write-intensive, you should shard the data so that all the data doesn't go to a single server.
 - For a batch processing, when you process something at the EOD, do not process everything at a single stretch. Keep them in queue
 and process one after the other so that not many instances are needed at only midnight.
-- For any process that involves multiple services, use a field, something like a UUID to identify the operation. Pass this ID
-along to all the services using HTTP headers. Then you can filter logs based on this ID. It is similar to opc-request-id in OCI.
+- For any process that involves multiple services, use a field, something like a UUID to identify the operation. Pass this ID along to all the services using HTTP headers. Then you can filter logs based on this ID. It is similar to opc-request-id in OCI.
 - Use **retries** wherever we can for failed requests. It's better to implement these using **exponential backoff with jitter** mechanism. 
-Each further retry is delayed by an exponential delay with a final maximum delay. We have to jitter because, we may retry all the requests that we have at the same time which can increase load on the upstream server at the same time. Adding a jitter will help prevent it.
+  - Each further retry is delayed by an exponential delay with a final maximum delay. We have to jitter because, we may retry all the requests that we have at the same time which can increase load on the upstream server at the same time. Adding a jitter will help prevent it.
+- Use **cells** when there is very high scale. You can split each region also into cells. More about cells in this [AWS re:Invent video](https://youtu.be/YZUNNzLDWb8?si=_eTm0vxNBFbhr9zL&t=2794)
+> Cells are defined as taking a large system (e.g., one big DynamoDB for an entire region) and creating multiple independent implementations, where each unit is called a cell. This allows for isolation (42:00, 42:14).
+    
+    > The video discusses two approaches to cell routing:
+
+    > Cell Router (Standard Approach): A server-side fleet acts as a cell router, directing customer requests to their specific cell (42:57). This approach is simple, highly resilient, and allows for updating cell assignments without customer cooperation. However, the cell router itself and its DNS are still regional points of failure (43:20, 43:43).
+
+    > Independent DNS Name per Cell (DynamoDB's Path): Every cell gets its own independent top-level DNS name and DNS management system. Customers will have their own DNS name (e.g., account id ddbre region.aiws API to AWS) that CNAMEs to their assigned cell (44:22, 44:39). This path results in less shared fate but is more complex as it requires customers to update their SDKs (45:07, 45:23).
+
+    >    The video emphasizes that cells are a great way to reduce regional impact, but it's important to think through why you're implementing them due to the ripple effects on architecture (46:22).
 
 ## To-Read
 
