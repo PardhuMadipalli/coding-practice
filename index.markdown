@@ -149,14 +149,24 @@ public int addDigits(int num) {
 #### Two pointers
 Sometimes, you may have to sort the data when using this. Also this can be extended to three pointers and more.
 
-1. [Three sum problem](https://leetcode.com/problems/3sum) - [Solution]({{ site.code_path }}problems/miscellaneous/ThreeSum.java)
-2. [Next Permutation problem](https://leetcode.com/problems/next-permutation/description/) - [Solution]({{ site.code_path }}problems/miscellaneous/NextPermutationTwo.java)
-3. [Longest substring without repeating characters 🔗](https://leetcode.com/problems/longest-substring-without-repeating-characters/) - [My solution 🔗](https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/7369905/two-pointer-approach-boolean-array-to-st-1zgx)
-4. [Minimum window substring Problem 🔗](https://leetcode.com/problems/minimum-window-substring/) - [Solution link 🔗](https://leetcode.com/problems/minimum-window-substring/solutions/7325527/beginner-friendly-solution-9976-beats-sl-gn3n/)
-5. [Minimum size subarray sum 🔗](https://leetcode.com/problems/minimum-size-subarray-sum/) - [Solution link 🔗](https://leetcode.com/problems/minimum-size-subarray-sum/solutions/7415019/beats-100-optimal-sliding-window-solutio-fi85) This problem can be solved using cumulative sum method too. But it takes `O(n^2)` time.
-6. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/discuss/2468752/can-anyone-clarify-this-doubt). Also watch the YT video [here](https://youtu.be/gqXU1UyA8pk?t=726).
-7. Longest substring with at least k repeating characters - [Explanation 1](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/2444441/Java-Solution-or-Recursive-or-Sliding-Window), [Explanation 2](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/solutions/170010/java-on-solution-with-detailed-explanati-d8q9/)
-   - The trick is to identify the logic based on what you can move the left and right pointers. So we identify a new problem where we want to use only _T_ unique characters. We increase the T from 1 to 26 (or the maximum number of unique chars in the string). Find the max of all the solutions of various T's.
+| Problem | Solution & Details |
+|---------|-------------------|
+| [Three sum problem](https://leetcode.com/problems/3sum) | [Solution]({{ site.code_path }}problems/miscellaneous/ThreeSum.java) |
+| [Next Permutation problem](https://leetcode.com/problems/next-permutation/description/) | [Solution]({{ site.code_path }}problems/miscellaneous/NextPermutationTwo.java) |
+| [Longest substring without repeating characters 🔗](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [My solution 🔗](https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/7369905/two-pointer-approach-boolean-array-to-st-1zgx) |
+| [Minimum window substring Problem 🔗](https://leetcode.com/problems/minimum-window-substring/) | [Solution link 🔗](https://leetcode.com/problems/minimum-window-substring/solutions/7325527/beginner-friendly-solution-9976-beats-sl-gn3n/) |
+| [Minimum size subarray sum 🔗](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Solution link 🔗](https://leetcode.com/problems/minimum-size-subarray-sum/solutions/7415019/beats-100-optimal-sliding-window-solutio-fi85) - Can be solved using cumulative sum method too. But it takes `O(n^2)` time. |
+| [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/discuss/2468752/can-anyone-clarify-this-doubt) | [YT video](https://youtu.be/gqXU1UyA8pk?t=726) |
+| [Longest substring with at least k repeating characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/description/) | [Explanation 1](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/2444441/Java-Solution-or-Recursive-or-Sliding-Window) - Find where you can break and apply divide and conquer. [Explanation 2](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/solutions/170010/java-on-solution-with-detailed-explanati-d8q9/) - The trick is to identify the logic based on what you can move the left and right pointers. So we identify a new problem where we want to use only _T_ unique characters. We increase the T from 1 to 26 (or the maximum number of unique chars in the string). Find the max of all the solutions of various T's. |
+
+#### Greedy
+
+| Problem | Solution & Details |
+|---------|--------------------|
+| [Jump Game](https://leetcode.com/problems/jump-game/) | [Recursive (very fast) and Greedy solutions]({{ site.code_path }}problems/miscellaneous/JumpGame.java) |
+| [Jump Game 2](https://leetcode.com/problems/jump-game-ii/) | [Solution]({{ site.code_path }}problems/miscellaneous/JumpGame2.java) - Read the comments in the code.|
+
+
 
 #### Diff array technique
 1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](problems/miscellaneous/CorpFlightBookings.java)
