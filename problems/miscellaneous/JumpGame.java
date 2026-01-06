@@ -26,18 +26,18 @@ public class JumpGame {
     public boolean canJumpGreedy(int[] nums) {
         int n = nums.length;
 
-        // boolean reach[] = new boolean[n];
         int maxval = n -1;
         int maxreach = 0;
         int curr;
         for(int i=0; i<n-1 && i <= maxreach; i++) {
             curr = i + nums[i];
+
             if(curr > maxreach) {
                 maxreach = curr;
             }
-            if(maxreach >= maxval) {
-                return true;
-            }
+
+            if(maxreach >= maxval) return true;
+
         }
 
         return maxreach >= maxval;

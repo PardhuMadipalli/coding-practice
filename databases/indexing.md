@@ -32,6 +32,9 @@ Created on the *unordered* primary key of the table. Here only dense index is po
 - B+ trees store the actual data in only the final leaf nodes, while B tree stores data in the intermediate layers too.
 
 ### Log Strusctured Merge Tree (LSM)
+![LSM tree Excalidraw]({{ site.baseurl }}/assets/images/lsm.png)
+[Excalidraw link](https://math.preview.excalidraw.com/#json=a87bVrdxfxNLNsiFx8Ico,hjZz5tGVkNAkMJjD2eGXBw)
+
 An LSM tree organizes data into a hierarchy of components, leveraging both memory and disk storage to handle data efficiently. 
 - **Memtable (In-Memory Component)** New data (inserts, updates, and deletes) is first written to an in-memory, write-ahead log (WAL) for durability and then inserted into a memory-resident sorted data structure, often a SkipList or an AVL tree, called the memtable. This allows for very fast, low-latency writes.
 - **SSTables (On-Disk Components)**: When the memtable reaches a predefined size, it is flushed to disk as an immutable Sorted String Table (SSTable) file. This process is a fast, sequential I/O operation. The on-disk data is organized into multiple levels (L0, L1, etc.), each containing SSTables.
@@ -48,4 +51,10 @@ An LSM tree organizes data into a hierarchy of components, leveraging both memor
 
 #### Used in
 - NoSQL systems like Cassandra, RocksDB, and HBase
+
+### Bloom filters
+
+![]({{ site.baseurl }}/assets/images/bloom-filters.png)
+
+[Excalidraw link](https://math.preview.excalidraw.com/#json=Ae0UZAdAZQ2wPiehRpuUm,sWODh-iUGs5ACNpTPdUAGQ)
 

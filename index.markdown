@@ -161,28 +161,40 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 
 #### Greedy
 
-| Problem | Solution & Details |
-|---------|--------------------|
+| Problem | Solution & Details                                                                                     |
+|---------|--------------------------------------------------------------------------------------------------------|
 | [Jump Game](https://leetcode.com/problems/jump-game/) | [Recursive (very fast) and Greedy solutions]({{ site.code_path }}problems/miscellaneous/JumpGame.java) |
-| [Jump Game 2](https://leetcode.com/problems/jump-game-ii/) | [Solution]({{ site.code_path }}problems/miscellaneous/JumpGame2.java) - Read the comments in the code.|
-
+| [Jump Game 2](https://leetcode.com/problems/jump-game-ii/) | [Solution]({{ site.code_path }}problems/miscellaneous/JumpGame2.java) - Read the comments in the code. |
+| [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/description/?envType=problem-list-v2&envId=dynamic-programming) | [Greedy solution](ddd)                                                                                 |
 
 
 #### Diff array technique
-1. [Corporate flight bookings](https://leetcode.com/problems/corporate-flight-bookings) - [solution](problems/miscellaneous/CorpFlightBookings.java)
+1. [Corporate flight bookings 🔗](https://leetcode.com/problems/corporate-flight-bookings) - [solution 🔗]({{ site.code_path }}problems/miscellaneous/CorpFlightBookings.java)
 
 #### Dynamic Programming (DP)
-1. [Maximal Square](https://leetcode.com/problems/maximal-square/) - Difficult to come up with the logic.
-2. [Largest magic square](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestMagicSquare.java)
-3. [Edit Distance](https://leetcode.com/problems/edit-distance/)
-4. [Maximum Profit in Job Scheduling](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/MaximumProfitInJobScheduling.java)
-5. [Palindrome partitioning](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/PalindromePartitioning.java)
-6. [Longest Valid Parentheses](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/LongestValidParentheses.java)
-7. A little tough: [Best time to buy and sell stock IV Leetcode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/discuss/2558269/JAVA-oror-Recursive-DP-Tabulation-and-Space-Optimization)
-8. [Bursting balloons](https://leetcode.com/problems/burst-balloons/discuss/2446689/Simple-Java-Solution-with-Explanation-DP)
-9. **LIS variant**: First sort the data based on one field, then find the LIS based on the second field.  [Russian doll envelopes](https://leetcode.com/problems/russian-doll-envelopes/discuss/2521874/Java-DP-based-on-Longest-Increasing-Subsequence)
-10. **LIS variant**: first sort and then check LIS property based on whether one is divisible by another. [Largest divisble subset](https://leetcode.com/problems/largest-divisible-subset/) 
-11. Similar to knapsack: [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/discuss/2532411/JAVA-solution-using-(subset-sum-equals-k))
+
+- Check if the given problem can be solved using recursion. If so, then observe if DP can help or not.
+- Even the maximum profit scheduling problem is a recursion: do you want to take current job or not. Some times, we may need to sort the data. Here we sorted in endTime order.
+
+   {: .note }
+   Use binary search if already sorted data exists, instead of using treemap just for the sake of _floorKey_ operation. It will help with time.
+
+
+| Problem                                                                                                                                                                | Solution & Details                                                                                                                           |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| [Maximal Square](https://leetcode.com/problems/maximal-square/)                                                                                                        | Difficult to come up with the logic. [Solution]({ site.code_path }}problems/dp/MaximalSquare.java)                                           |
+| [Largest rectangle Problem](https://leetcode.com/problems/maximal-rectangle/)                                                                                          | [Histogram based solution](https://leetcode.com/problems/maximal-rectangle/solutions/7042757/stack-histogram-trick-faang-favourite-an-n8p9/) |
+| [Largest magic square](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestMagicSquare.java)                                    |                                                                                                                                              |
+| [Edit Distance](https://leetcode.com/problems/edit-distance/)                                                                                                          |                                                                                                                                              |
+| [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling)                                                                     | [DP solution]({{ site.code_path }}problems/dp/MaximumProfitInJobSchedulingDp.java) - Sort it and get into Knapsack style problem             |
+| [Palindrome partitioning](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/PalindromePartitioning.java)                                        |                                                                                                                                              |
+| [Longest Valid Parentheses](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/dp/LongestValidParentheses.java)                                     |                                                                                                                                              |
+| [Best time to buy and sell stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/discuss/2558269/JAVA-oror-Recursive-DP-Tabulation-and-Space-Optimization) | A little tough                                                                                                                               |
+| [Bursting balloons](https://leetcode.com/problems/burst-balloons/discuss/2446689/Simple-Java-Solution-with-Explanation-DP)                                             |                                                                                                                                              |
+| [Wild card matching problem](https://leetcode.com/problems/wildcard-matching/description/?envType=problem-list-v2&envId=dynamic-programming)                           | [Solution]({{ site.code_path }}problems/dp/WildcardMatching.java)                                                                            |
+| [Russian doll envelopes](https://leetcode.com/problems/russian-doll-envelopes/discuss/2521874/Java-DP-based-on-Longest-Increasing-Subsequence)                         | **LIS variant**: First sort the data based on one field, then find the LIS based on the second field.                                        |
+| [Largest divisible subset](https://leetcode.com/problems/largest-divisible-subset/)                                                                                    | **LIS variant**: first sort and then check LIS property based on whether one is divisible by another.                                        |
+| [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/discuss/2532411/JAVA-solution-using-(subset-sum-equals-k))                       | Similar to knapsack                                                                                                                          |
 
 #### Using original indexes array
 1. [Couples holding hands](https://leetcode.com/problems/couples-holding-hands/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/Coupleholdinghands.java)

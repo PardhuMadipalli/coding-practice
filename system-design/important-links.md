@@ -6,6 +6,12 @@ layout: page
 title: Important links
 parent: System Design
 ---
-# System Design important links
+## Interview prep
+
+- [HelloInterview](https://www.hellointerview.com/)
+
+## System Design important links
 
 - [Karan Pratap Singh system design](https://www.karanpratapsingh.com/courses/system-design)
+- [Using load shedding to avoid overload](https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/)
+- [Shuffle Sharding to avoid noisy neighbours problem when assigning resources to tenants.](https://aws.amazon.com/blogs/compute/handling-billions-of-invocations-best-practices-from-aws-lambda/)
