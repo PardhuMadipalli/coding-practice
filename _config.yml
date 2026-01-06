@@ -33,3 +33,8 @@ exclude:
   - "*.iml"
   - out/
   - .idea/
+  - vendor/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
