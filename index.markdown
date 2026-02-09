@@ -132,11 +132,16 @@ public int addDigits(int num) {
 2. hello
 
 #### Monotonic queue
-1. [Shortest Unsorted Continuous Subarray](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/ShortestUnsortedContinuousSubarray.java)
-2. [Sliding Window Maximum problem 🔗](https://leetcode.com/problems/sliding-window-maximum/) - [Solution 🔗]({{ site.code_path }}problems/miscellaneous/MaxSlidingWindow.java)
-3. [Remove duplicate numbers Leetcode 🔗](https://leetcode.com/problems/remove-duplicate-letters) - [Solution 🔗]({{ site.code_path }}problems/miscellaneous/RemoveDuplicateLetters.java)
-4. [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java)
-5. [Remove k digits Leetcode](https://leetcode.com/problems/remove-k-digits/discuss/2572477/Java-oror-Stack)
+
+| Problem | Solution & Details |
+|---------|-------------------|
+| [Shortest Unsorted Continuous Subarray](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/ShortestUnsortedContinuousSubarray.java) | |
+| [Sliding Window Maximum problem 🔗](https://leetcode.com/problems/sliding-window-maximum/) | [Solution 🔗]({{ site.code_path }}problems/miscellaneous/MaxSlidingWindow.java) |
+| [Remove duplicate numbers Leetcode 🔗](https://leetcode.com/problems/remove-duplicate-letters) | [Solution 🔗]({{ site.code_path }}problems/miscellaneous/RemoveDuplicateLetters.java) |
+| [Largest Rectangle in a histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) | [Solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/LargestHistogram.java) |
+| [Remove k digits Leetcode](https://leetcode.com/problems/remove-k-digits/discuss/2572477/Java-oror-Stack) | |
+| [Most competitive subsequence 🔗](https://leetcode.com/problems/find-the-most-competitive-subsequence/description/) | [My solution 🔗]({{ site.code_path }}problems/miscellaneous/MostCompetitive.java) |
+| [Create maximum number from two integer arrays 🔗](https://leetcode.com/problems/create-maximum-number/description/) | A complex problem involving the above problem. First take all possible splits i.e, if you take 2 elements from the first array, then you must take k-2 from the second. Use above problem to find the most competitive subsequence of given length from each array. Merge the solutions from two arrays greedily (start by comparing the first elements of each result array). Find the maximum from all the possible solutions. |
 
 #### Binary search
 [Binary search problems folder](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/binarysearch)
@@ -167,6 +172,19 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 | [Jump Game 2](https://leetcode.com/problems/jump-game-ii/) | [Solution]({{ site.code_path }}problems/miscellaneous/JumpGame2.java) - Read the comments in the code. |
 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/description/?envType=problem-list-v2&envId=dynamic-programming) | [Greedy solution](ddd)                                                                                 |
 
+#### Segment tree and Binary Search Tree variants
+
+| Problem | Solution & Details                                                                                     |
+|---------|--------------------------------------------------------------------------------------------------------|
+| [My Calendar II](https://leetcode.com/problems/my-calendar-ii/) | [My published solution](https://leetcode.com/problems/my-calendar-ii/solutions/7530045/using-two-treemaps-and-merging-overlappi-q3cq/). Used treemap and merged ranges intelligently to reduce the tree size. |
+
+
+#### Backtracking
+
+| Problem | Solution & Details                                                                                                                                                                                                                                                                                                                           |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Word search II](https://leetcode.com/problems/word-search-ii/description/?) | [Solution](https://leetcode.com/problems/word-search-ii/solutions/7367107/simple-logic-based-dfs-trie-backtracking-z37o/?envType=problem-list-v2&envId=backtracking). Maintain a Trie to make the word search faster. Instead of searching for each word, you backtrack the entire board and note down whenever you find a word of interest. |
+| [Word Ladder II]() | [Solution]({{ site.code_path }}problems/backtracking/WordLadderII.java). The solution used both BFS (to find all the parents till end word; see [BFS section](#breadth-first-search-bfs)) and DFS/backtracking to find the paths.                                                                                                                |
 
 #### Diff array technique
 1. [Corporate flight bookings 🔗](https://leetcode.com/problems/corporate-flight-bookings) - [solution 🔗]({{ site.code_path }}problems/miscellaneous/CorpFlightBookings.java)
@@ -232,7 +250,7 @@ This can be used in a lot of places. Some are:
 1. [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/)
 
 #### No or constant extra space
-See if you can manipulate the existing array/DS itself. For example, you can change the sign of the element etc to remember wehther visited or not.
+See if you can manipulate the existing array/DS itself. For example, you can change the sign of the element etc., to remember whether visited or not.
 1. [First Missing Positive](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/FirstMissingPositive.java)
 
 
@@ -252,6 +270,9 @@ See if you can manipulate the existing array/DS itself. For example, you can cha
 - We have to use Dijkstra's etc when the graph is weighted.
 - Note that for some problems we may use multi-source BFS, where multiple datapoints can be source.
 - When we are tracing one layer after the other, we may need to store the parent element of the current element. For example, in a word ladder problem, we may need to store the parent word to trace the path back.
+While generally you stop the while loop when you find the element, sometimes you need to further process until the current level is finished (when the desired element is in the next level). This is needed when let's say you are trying to find all shortest paths to desired element, not just one path.
+  To achieve this, you need to add next level elements only after current level is processed entirely, i.e. until queue is empty.
+
 ###### Problems examples from [chatGPT](https://chatgpt.com/share/690c6924-c07c-8006-9ef8-3c346bcc2bcf)
 
 | Category                                           | Example Problem / Use                                                                                                                                                                           |
@@ -278,7 +299,8 @@ See if you can manipulate the existing array/DS itself. For example, you can cha
 - Connected components: You can use DFS to find all the connected components within an undirected graph.
 - Backtracking algorithms: DFS is a fundamental part of backtracking algorithms, where a solution is built incrementally, and if a path does not lead to a solution, the algorithm "backtracks" to try a different path.
 - Web crawling: A website crawler can use DFS to explore links and go deep into a website's structure before returning to explore other links.
-- AI and game theory: It is used in AI for tasks like game-tree search, where the system explores possible moves and counter-moves to find a winning strategy. 
+- AI and game theory: It is used in AI for tasks like game-tree search, where the system explores possible moves and counter-moves to find a winning strategy.
+
 
 ###### Problems list
 1. [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/2580074/Java-Solution-using-DFS)
