@@ -9,6 +9,7 @@ public class NextPermutationTwo {
             if (nums[r] > nums[r-1]) {
                 // We have to replace num[r-1] with the number just bigger than this starting from right most
                 for (int target = len - 1; target > 0; target--) {
+                    // swap the number at index r-1 and the just bigger number
                     if (nums[target] > nums[r-1]) {
                         int tmp = nums[target];
                         nums[target] = nums[r-1];
@@ -16,6 +17,9 @@ public class NextPermutationTwo {
                         break;
                     }
                 }
+                // We have to sort them in asceding order
+                // But the numbers due to our swap are in the descending order
+                // So we just need to swap them
                 reverse(nums, r, len-1);
                 return;
             }

@@ -5,13 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 
 // Asked in Nutanix online assessment
+// used path compression to prevent longer times for findRoot operation
 
 /*
 
  Imagine a network where nodes have strength values from 1 to n.
  Each of them belong to their own networks initially.
  After each time instant we join node from[i] to to[i].
- After we join network with the highest value will take the value of the entire network.
+ After we join, network with the highest value will take the value of the entire network.
 
  Imagine networks with initial nodes: {1}, {2}, {3}, {4}, {5}, {6}, {7}
  from = {1, 4, 3, 6, 2, 7}
@@ -26,7 +27,7 @@ import java.util.List;
  After 5th second we have {1,2,3,4,5,6,7} ; Answer[6] = 7
 
  */
-public class NetworkSumUnionFind {
+public class NetworkSumUnionFindGood {
     public static List<Long> networkSums(int nodeCount, List<Integer> from, List<Integer> to) {
         Node[] nodes = new Node[nodeCount+1];
         long sum = 0L;
@@ -39,8 +40,8 @@ public class NetworkSumUnionFind {
 
         for(int i=0; i<from.size(); i++) {
 
-            Node firstTopNode = findroot(nodes[from.get(i)]);
-            Node secondTopNode = findroot(nodes[to.get(i)]);
+            Node firstTopNode = findRoot(nodes[from.get(i)]);
+            Node secondTopNode = findRoot(nodes[to.get(i)]);
 
             if(firstTopNode.val > secondTopNode.val) {
                 secondTopNode.parent = firstTopNode;
@@ -54,12 +55,12 @@ public class NetworkSumUnionFind {
         return ans;
     }
 
-    // This function may take forever to run if there are a lot of elements in the list.
-    private static Node findroot(Node node) {
-        while (node.parent != null) {
-            node = node.parent;
+    // Use path compression
+    private static Node findRoot(Node node) {
+        if (node.parent != node) {
+            node.parent = findRoot(node.parent);
         }
-        return node;
+        return node.parent;
     }
 
     private static class Node {
@@ -68,13 +69,14 @@ public class NetworkSumUnionFind {
 
         Node(int val) {
             this.val = val;
+            // the parent will point to node initially
+            this.parent = this;
         }
-
     }
 
     public static void main(String[] a) {
         Integer[] from = new Integer[]{1, 4, 3, 6, 2, 7};
         Integer[] to =   new Integer[]{2, 5, 2, 4, 5, 1};
-        networkSums(7, Arrays.asList(from), Arrays.asList(to));
+        System.out.println();networkSums(7, Arrays.asList(from), Arrays.asList(to));
     }
 }
