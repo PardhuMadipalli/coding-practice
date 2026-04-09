@@ -28,4 +28,36 @@ public class Coupleholdinghands {
 
         return swap;
     }
+
+    // Union-Find approach:
+    // Model each bench as an edge between the two couple-numbers sitting there.
+    // A connected component of size k needs k-1 swaps.
+    // Answer = n - number of connected components.
+    public int minSwapsCouplesUnionFind(int[] row) {
+        int n = row.length / 2;
+        int[] parent = new int[n];
+        for (int i = 0; i < n; i++) parent[i] = i;
+
+        for (int i = 0; i < row.length; i += 2) {
+            int c1 = row[i] / 2;
+            int c2 = row[i + 1] / 2;
+            union(parent, c1, c2);
+        }
+
+        int components = 0;
+        for (int i = 0; i < n; i++) {
+            if (find(parent, i) == i) components++;
+        }
+
+        return n - components;
+    }
+
+    private int find(int[] parent, int x) {
+        if (parent[x] != x) parent[x] = find(parent, parent[x]); // path compression
+        return parent[x];
+    }
+
+    private void union(int[] parent, int a, int b) {
+        parent[find(parent, a)] = find(parent, b);
+    }
 }
