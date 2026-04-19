@@ -35,6 +35,11 @@ and process one after the other so that not many instances are needed at only mi
 - Caching levels: Frontend, backend and database
 - Social media design board [link](https://whimsical.com/scaler-social-media-platform-Mmg5KJTJ7qQ7qU4HnBrU9Z)
 - DAGs, used for batch processing
+- Redlock (lock of Redis)
+- How oto prevent deadlocks, in the code, infra etc
+- How to handle hot paritions in the case of celebrity posts in Instagram etc
+- geospatial indexes in designs of Uber etc. PostgreSQL with PostGIS extensions or Redis' geospatial data type
+
 
 ## Miscellaneous
 ### Entity design
@@ -69,3 +74,15 @@ Fields: ID, student_id(FK), course_id(FK), Marks. Here marks indicate the score 
 #### Limit order book design
 - [Design link](https://web.archive.org/web/20110219163448/http://howtohft.wordpress.com/2011/02/15/how-to-build-a-fast-limit-order-book/)
 - They used BST, hashmaps and linkedLists all together to design the order book.
+
+## Links
+### Interview prep
+
+- [HelloInterview](https://www.hellointerview.com/)
+
+### System Design important links
+
+- [Karan Pratap Singh system design](https://www.karanpratapsingh.com/courses/system-design)
+- [Using load shedding to avoid overload](https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/)
+- [Shuffle Sharding to avoid noisy neighbours problem when assigning resources to tenants.](https://aws.amazon.com/blogs/compute/handling-billions-of-invocations-best-practices-from-aws-lambda/)
+- [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)

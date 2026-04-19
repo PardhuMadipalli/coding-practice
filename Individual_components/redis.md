@@ -1,7 +1,7 @@
 ---
 layout: custom_page
 title: Redis
-parent: System Design
+parent: Miscellaneous
 ---
 
 ## Redis
