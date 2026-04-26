@@ -104,7 +104,7 @@ Why a majority? Because any two majorities must overlap in at least one server. 
 
 When a client connects to ZooKeeper, it establishes a **session**. A session is a logical connection between the client and the ZooKeeper ensemble (not a specific server). The session has:
 
-- A **session ID** — a unique 64-bit identifier assigned by the server.
+- A **session ID** — a unique 64-bit identifier assigned by the leader at session creation time, using the same single-leader counter mechanism as zxids.
 - A **session timeout** — negotiated between the client and server at connection time. The client proposes a timeout; the server may adjust it within its configured bounds (`minSessionTimeout` and `maxSessionTimeout`, which default to 2× and 20× the tick time respectively).
 - A **session password** — used to re-authenticate if the client reconnects to a different server.
 
@@ -203,7 +203,7 @@ The `version` field is particularly important. When you update a znode, you can 
 
 **Ephemeral znodes** — Tied to the client session that created them. When the session ends (either by explicit close or by timeout due to missed heartbeats), the ephemeral znode is automatically deleted. Ephemeral znodes **cannot have children**. Use these for representing live processes — if the process dies, the znode disappears, and other processes can detect this.
 
-**Sequential znodes** — When you create a sequential znode, ZooKeeper appends a 10-digit, zero-padded, monotonically increasing sequence number to the path you specify. For example, creating `/locks/lock-` produces `/locks/lock-0000000001`, then `/locks/lock-0000000002`, etc. The counter is maintained per parent znode and never reuses numbers (even after deletions). Use these when you need ordering.
+**Sequential znodes** — When you create a sequential znode, ZooKeeper appends a 10-digit, zero-padded, monotonically increasing sequence number to the path you specify. For example, creating `/locks/lock-` produces `/locks/lock-0000000001`, then `/locks/lock-0000000002`, etc. The counter is maintained per parent znode and never reuses numbers (even after deletions). Use these when you need ordering. Like the zxid, this counter is assigned by the leader as part of the same atomic write transaction — two concurrent create requests for the same parent can never receive the same sequence number.
 
 **Container znodes** (added in 3.6) — A special persistent znode that is automatically deleted by the server when its last child is removed. Useful for recipes like leader election or locks where the parent path should be cleaned up when no longer needed.
 
@@ -236,6 +236,8 @@ zxid = [epoch (32 bits)][counter (32 bits)]
 - **Counter** — Incremented for each transaction within an epoch.
 
 For example, zxid `0x0000000300000005` means epoch 3, transaction 5.
+
+**Why zxids are always unique:** Every write in the cluster is funneled through the single leader (followers forward writes to it). The leader holds the counter in memory and increments it before broadcasting each proposal — no two transactions can race to claim the same value. When a new leader is elected, the epoch increments and the counter resets to 0, so zxids from the old leader (e.g., `epoch=3, counter=99`) can never collide with zxids from the new leader (`epoch=4, counter=1`). This also means a partitioned old leader that still thinks it's alive cannot issue zxids that conflict with the new leader's.
 
 ### 6.2 The Write Path in Detail
 

@@ -10,3 +10,4 @@ _site
 .jekyll-metadata
 vendor
 .vscode
+.kiro/settings/mcp.json

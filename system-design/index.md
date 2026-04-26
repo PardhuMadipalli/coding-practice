@@ -75,6 +75,9 @@ Fields: ID, student_id(FK), course_id(FK), Marks. Here marks indicate the score 
 - [Design link](https://web.archive.org/web/20110219163448/http://howtohft.wordpress.com/2011/02/15/how-to-build-a-fast-limit-order-book/)
 - They used BST, hashmaps and linkedLists all together to design the order book.
 
+#### Top-K / Trending items
+- See the dedicated [Top-K Problem page](top-k/) for approaches using Redis sorted sets, Redis TOPK, and stream processors (Flink), including when each is appropriate.
+
 ## Links
 ### Interview prep
 
