@@ -6,6 +6,11 @@ layout: custom_page
 title: DSA
 nav_order: 1
 ---
+
+## Interview Patterns Index
+
+See the [Patterns page](patterns/) for a consolidated map of the 15 core LeetCode patterns and 20 DP sub-patterns, cross-referenced with the problems already covered in this repo and flagged by interview importance.
+
 ## Search
 - Binary search
   - [binary Helper codes](https://github.com/PardhuMadipalli/coding-practice/blob/main/binarysearch)
