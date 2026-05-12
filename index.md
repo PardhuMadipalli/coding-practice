@@ -158,6 +158,10 @@ public int addDigits(int num) {
 ##### Binary search over solution space
 1. [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/discuss/2553108/Java-oror-Binary-Search-oror-With-Full-and-Easy-Explanation)
 
+##### Binary search on a maintained sorted structure (patience sort)
+- **LIS in O(n log n)**: maintain a `tails` array where `tails[k]` = smallest tail of any increasing subsequence of length `k+1`. For each element: if it extends the longest subsequence, append; otherwise binary search for the first tail ≥ element and replace it. Length of `tails` at the end = LIS length. See [GFG explanation](https://www.geeksforgeeks.org/dsa/longest-increasing-subsequence-dp-3/#using-binary-search-on-log-n-time-and-on-space).
+- Required for **Russian Doll Envelopes** (n=10⁵, O(n²) TLEs) — see [DP page](dp/).
+
 #### Prefix sum
 Use this when sums are involved and when the order of the elements to compute the sum matters.
 - Find the longest subarray where sum of elements will be equals to K. Find all prefix sums. Then store them in a map with sums as keys. Now you take each sum $$s$$ and see if there exists another sum whose value is $$K-s$$.
@@ -213,6 +217,32 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/description/?envType=problem-list-v2&envId=dynamic-programming) | [Greedy solution](ddd)                                                                                                                                                                  |
 | [Maximum score including k-th element](https://leetcode.com/problems/maximum-score-of-a-good-subarray/) | [My greedy solution]({{ site.code_path }}problems/miscellaneous/MaximumScoreTwoPointers.java) <br>Start from index k. Move to the left or right, depending on which is a bigger element.|
 
+#### Binary Indexed Tree (Fenwick Tree / BIT)
+
+Use when you need **O(log n) prefix queries + point updates** on an array. Classic use cases: prefix sum, prefix max, counting inversions, DP optimizations where you query "best value among all predecessors with value < x".
+
+**Core idea:** Each index `i` in the BIT is responsible for a range of size `i & (-i)` (the lowest set bit of `i`).
+- `bit[1]` covers `[1..1]`, `bit[2]` covers `[1..2]`, `bit[4]` covers `[1..4]`, `bit[6]` covers `[5..6]`, `bit[8]` covers `[1..8]`
+
+**Query prefix[1..i]:** strip the lowest set bit repeatedly → `i -= i & (-i)` until `i = 0`
+
+**Update index i:** add the lowest set bit repeatedly → `i += i & (-i)` until `i > n`
+
+![BIT / Fenwick Tree](attachments/bit-fenwick-tree.excalidraw.svg)
+
+```java
+// Prefix sum BIT
+void update(int i, int val) {
+    for (; i <= n; i += i & -i) bit[i] += val;
+}
+int query(int i) {
+    int sum = 0;
+    for (; i > 0; i -= i & -i) sum += bit[i];
+    return sum;
+}
+// For prefix MAX: replace += with Math.max (only works when values are non-decreasing)
+```
+
 #### Segment tree and Binary Search Tree variants
 
 | Problem | Solution & Details                                                                                     |
@@ -233,6 +263,20 @@ Sometimes, you may have to sort the data when using this. Also this can be exten
 ### Dynamic Programming (DP)
 
 See the [Dynamic Programming page](dp/) for concepts and problems.
+
+### Circular arrays
+
+When a problem involves a circular array, index 0 and index n-1 are neighbors, which breaks standard linear DP or greedy approaches. The general technique is to **fix the boundary and reduce to a linear subproblem**.
+
+Since index 0 and index n-1 can't both satisfy a mutually exclusive constraint (e.g. both be peaks, both be selected in a non-adjacent set), split into cases that cover all possibilities and take the best result:
+
+- **Neither** boundary index satisfies the constraint → solve on `[1..n-2]`
+- **Last index** satisfies it → fix its contribution, solve on `[1..n-3]`
+- **First index** satisfies it → fix its contribution, solve on `[2..n-2]`
+
+| Problem | Solution & Details |
+|---------|--------------------|
+| [Minimum Operations to Achieve At Least K Peaks](https://leetcode.com/problems/minimum-operations-to-achieve-at-least-k-peaks/) | Non-adjacent peak selection on a circular array. Greedy (sort by cost) fails. Split into 3 linear cases, then DP. See [DP page](dp/#minimum-operations-to-achieve-at-least-k-peaks) for full explanation. [DP solution]({{ site.code_path }}problems/miscellaneous/MinOperationsKPeaks.java) \| [Brute force]({{ site.code_path }}problems/miscellaneous/MinOperationsKPeaksBruteForce.java) |
 
 ### Using original indexes array
 1. [Couples holding hands](https://leetcode.com/problems/couples-holding-hands/) - [solution](https://github.com/PardhuMadipalli/coding-practice/blob/main/problems/miscellaneous/Coupleholdinghands.java)

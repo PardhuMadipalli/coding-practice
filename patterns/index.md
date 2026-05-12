@@ -253,6 +253,8 @@ Include or exclude each item, with a weight/capacity constraint. State = `(index
 - [Partition Equal Subset Sum]({{ site.code_path }}problems/dp/EqualPartition.java) — classic reduction to 0/1 knapsack
 - [Maximum Profit in Job Scheduling (DP)]({{ site.code_path }}problems/dp/MaximumProfitInJobSchedulingDp.java) — knapsack-style after sorting by end time
 - [Maximum Profit in Job Scheduling (recursive)]({{ site.code_path }}problems/dp/MaximumProfitInJobScheduling.java)
+- [Minimum Operations to Achieve At Least K Peaks]({{ site.code_path }}problems/miscellaneous/MinOperationsKPeaksKnapsack.java) — pick/skip on circular array; `solve(i+2, peaks-1)` on pick (jump by 2 for non-adjacency) is the only difference from classic 0/1 knapsack. See [DP page]({{ site.baseurl }}/dp/#minimum-operations-to-achieve-at-least-k-peaks) for full write-up.
+- [Maximum Sum Alternating Subsequence with Distance K]({{ site.code_path }}problems/dp/MaximumSumAlternatingWithDistK.java) — state `(i, prevWasSmall)`, pick any j ≤ i-k with alternating constraint. O(n²k) memoization. [O(n log n) BIT-optimized version]({{ site.code_path }}problems/dp/MaximumSumAlternatingWithDistKOptimized.java) uses prefix/suffix max BITs indexed by value with a lag-by-k insertion window.
 - Problem notes — see [DP page]({{ site.baseurl }}/dp/)
 
 ---
@@ -445,6 +447,8 @@ DFS postorder or Kahn's BFS on a DAG. Foundation for scheduling/dependency probl
 ### Greedy 🔴
 Locally-optimal choices that provably lead to a global optimum. Often paired with sorting or a heap.
 
+**When greedy fails:** if picking the locally cheapest item can block multiple other cheap items and force an expensive choice, greedy gives the wrong answer. Classic signal: non-adjacent selection with a cost constraint (e.g. K Peaks below). Use DP instead.
+
 **Covered here:**
 - [Jump Game]({{ site.code_path }}problems/miscellaneous/JumpGame.java) / [Jump Game II]({{ site.code_path }}problems/miscellaneous/JumpGame2.java)
 - [Candy]({{ site.code_path }}problems/miscellaneous/Candy.java)
@@ -453,6 +457,7 @@ Locally-optimal choices that provably lead to a global optimum. Often paired wit
 - [Largest Number (custom comparator)]({{ site.code_path }}problems/miscellaneous/LargestNumber.java)
 - [Maximum Score of a Good Subarray (greedy two-pointer)]({{ site.code_path }}problems/miscellaneous/MaximumScoreTwoPointers.java)
 - [Create Maximum Number from Two Arrays]({{ site.baseurl }}/#monotonic-queue) — greedy + monotonic stack
+- **Greedy fails example:** [Minimum Operations to Achieve At Least K Peaks]({{ site.baseurl }}/dp/#minimum-operations-to-achieve-at-least-k-peaks) — sorting by cost and picking cheapest non-adjacent peaks doesn't work; requires DP
 - More examples — see [Greedy section]({{ site.baseurl }}/#greedy)
 
 ---
